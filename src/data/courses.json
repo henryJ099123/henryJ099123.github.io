@@ -1,0 +1,27 @@
+[
+    {
+      "id": 0,
+      "name": "Fundamentals of Computing",
+      "description": "This is the first part of a two-course computer programming sequence, intended primarily for computer science and computer engineering majors. It introduces fundamental concepts and principles of computer science, from formulating a problem and analyzing it conceptually, to designing, implementing, and testing a program on a computer. Using data and procedural abstractions as basic design principles for programs, students learn to define basic data structures, such as lists and trees, and to apply various algorithms for operating on them. The course also introduces object-oriented methods."
+    },
+    {
+      "id": 1,
+      "name": "Systems Programming",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+    },
+    {
+      "id": 2,
+      "name": "Abstract Algebra",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+    },
+    {
+      "id": 3,
+      "name": "Data Structures",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+    },
+    {
+      "id": 4,
+      "name": "Real Analysis",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+    }
+  ]
