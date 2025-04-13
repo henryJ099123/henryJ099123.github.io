@@ -4,7 +4,9 @@ import linkedinLogo from './assets/In-Blue-48.png'
 import githubLogo from './assets/github-mark/github-mark.svg'
 import profilePic from './assets/moses.jpeg'
 import courses from './data/courses.json'
+import projects from './data/projects.json'
 import shaders from './data/shaders.json'
+import experiences from './data/experience.json'
 import GlslCanvas from 'glslCanvas'
 
 // function Button({text}) {
@@ -33,7 +35,7 @@ function ListOfProjects({projects}) {
     <li key={item.id} className='project-ind'>
       <div className='description-project'>
         <h4>{item.title}</h4>
-        <div className='text-box-project'>{item.description}</div>
+        <p className='text-box-project'>{item.description}</p>
       </div>
       <div className='card'>
         <img src={profilePic} className='avatar'/>
@@ -41,6 +43,25 @@ function ListOfProjects({projects}) {
     </li>
   )
   return <ul className='projects'>{listItems}</ul>
+}
+
+function ListOfExperiences({experiences}) {
+  const listItems = experiences.map(experience => 
+    <li key={experience.id} className='experiences-ind'>
+      <div className='experiences-meta'>
+        <h4>{experience.employer}: {experience.title}</h4>
+        <h5>{experience.time}</h5>
+      </div>
+      <div className='experiences-content'>
+        <p className='experiences-description'>{experience.description}</p>
+        <div className='card'>
+          <img src={profilePic} className='avatar'/>
+        </div>
+      </div>
+
+    </li>
+  )
+  return <ul className='experiences'>{listItems}</ul>
 }
 
 function ListOfCourses({courses, updater}) {
@@ -108,33 +129,9 @@ const GlslCanvasComponent = ({ shader }) => {
 
 function App() {
 
-
-  let projects = [
-    {
-      id: 0,
-      title: 'Project1',
-      description: LoremIpsumShort()
-    },
-    {
-      id: 1,
-      title: 'Project2',
-      description: LoremIpsumShort()
-    },
-    {
-      id: 2,
-      title: 'Project3',
-      description: LoremIpsumShort()
-    },
-    {
-      id: 3,
-      title: 'Project4',
-      description: LoremIpsumShort()
-    }
-  ]
-
   let [courseIndex, setCourseIndex] = useState(0)
   let curr_course = courses.find((course) => course.id === courseIndex)
-  let curr_shader = shaders.find((shader) => shader.name === "fbm_practice.frag").data
+  let curr_shader = shaders.find((shader) => shader.name === "fbm_ow.frag").data
 
   return (
     <>
@@ -149,32 +146,41 @@ function App() {
         <li className='nav-item-r'><a href="https://github.com/henryJ099123">
           <img src={githubLogo} alt='github logo' width={20} height={20}/>
         </a></li>
+        <li className='nav-item-r'><a href="google.com" style={{"color": "black"}}>
+          resumé
+        </a></li>
       </ul>
       <div className='everything-box'>
 
         {/* the top part with my name and stuff */}
         <div className='top-part'>
           <GlslCanvasComponent stile='glslCanvas' shader={curr_shader}/>
-          <h1 className="top-part-name">Henry Jochaniewicz</h1>
+          <div className="top-part-name">
+            <h1>Henry Jochaniewicz</h1>
+            <h3>I did in fact make that. applause please</h3>
+          </div>
         </div>
         {/* description area */}
         <div className='description'>
           <div className='text-box'>
-            <h1>Henry Jochaniewicz</h1>
+            <h2>about me</h2>
             <div className='left-align'><LoremIpsum /></div>
           </div>
           <div className='card'>
-            <img src={profilePic} className='avatar'/>
+            <img src={profilePic} className='avatar' 
+                  style={{"height":"300px", "width":"300px"}}/>
           </div>
         </div>
 
         {/* Relevant coursework */}
         <div>
-          <div className='header3'>
-            <h3>Relevant Coursework:</h3>
-          </div>
           <div className='courses'>
-            <ListOfCourses courses={courses} updater={setCourseIndex}/>
+            <div className='courses-header'>
+                <div className='headers'>
+                <h2>relevant coursework</h2>
+              </div>
+              <ListOfCourses courses={courses} updater={setCourseIndex}/>
+            </div>
             <CourseDescription image={profilePic}>
               <p>{curr_course.name}</p>
               <p>{curr_course.description}</p>
@@ -182,10 +188,18 @@ function App() {
           </div>
         </div>
 
+        {/* maybe the work stuff now? */}
+        <div>
+          <div className='headers'>
+            <h2>experience</h2>
+          </div>
+          <ListOfExperiences experiences={experiences} />
+        </div>
+
         {/* my current projects */}
         <div>
-          <div className='header3'>
-            <h3>Current Projects:</h3>
+          <div className='headers'>
+            <h2>current projects</h2>
           </div>
           <ListOfProjects projects={projects}/>
         </div>
