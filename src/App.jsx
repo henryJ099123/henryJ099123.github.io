@@ -63,46 +63,48 @@ function CourseDescription({image, children}) {
   )
 }
 
-const GlslCanvasComponent = ({ shader, stile}) => {
-  const canvasRef = useRef(null)
-  const containerRef = useRef(null)
+const GlslCanvasComponent = ({ shader }) => {
+  const canvasRef = useRef(null);
+  const containerRef = useRef(null);
 
   const resizer = (canvas, container) => {
-    const rect = container.getBoundingClientRect();
-    canvas.width = container.clientWidth * window.devicePixelRatio;
-    canvas.height = container.clientHeight * window.devicePixelRatio;
-    canvas.style.width = rect.width + "px";
-    canvas.style.height = rect.height + "px";
+    const rect = container.getBoundingClientRect()
+    canvas.width = rect.width * window.devicePixelRatio;
+    canvas.height = rect.height * window.devicePixelRatio;
+    // canvas.style.width = rect.width + "px";
+    // canvas.style.height = rect.height + "px";
   };
 
   useEffect(() => {
-    const node = canvasRef.current;
+    const canvas = canvasRef.current;
     const container = containerRef.current;
-    const sandbox = new GlslCanvas(canvasRef.current)
+    const sandbox = new GlslCanvas(canvas);
 
-    resizer(node, container)
-    sandbox.load(shader)
+    resizer(canvas, container);
+    canvas.height = container.getBoundingClientRect().height * window.devicePixelRatio;
+    sandbox.load(shader);
 
     const handler = () => {
       if (
-        node.clientWidth !== container.clientWidth ||
-        node.clientHeight !== container.clientHeight
+        canvas.clientWidth !== container.clientWidth ||
+        canvas.clientHeight !== container.clientHeight
       )
-        resizer(canvasRef.current, containerRef.current);   
-    }
+        resizer(canvasRef.current, containerRef.current);
+    };
+
     window.addEventListener("resize", handler);
 
     return () => {
-      window.removeEventListener("resize", handler)
-    }
-  }, [])
+      window.removeEventListener("resize", handler);
+    };
+  }, []);
 
   return (
-    <div ref={containerRef} className="shaderBox">
-      <canvas className='shaderCanvas' ref={canvasRef}></canvas>
+    <div ref={containerRef}>
+      <canvas ref={canvasRef} className="shaderCanvas" />
     </div>
-  )
-}
+  );
+};
 
 function App() {
 
@@ -132,7 +134,7 @@ function App() {
 
   let [courseIndex, setCourseIndex] = useState(0)
   let curr_course = courses.find((course) => course.id === courseIndex)
-  let curr_shader = shaders.find((shader) => shader.name === "cellular_noise.frag").data
+  let curr_shader = shaders.find((shader) => shader.name === "fbm_practice.frag").data
 
   return (
     <>
@@ -153,7 +155,7 @@ function App() {
         {/* the top part with my name and stuff */}
         <div className='top-part'>
           <GlslCanvasComponent stile='glslCanvas' shader={curr_shader}/>
-          <h1>Henry Jochaniewicz</h1>
+          <h1 className="top-part-name">Henry Jochaniewicz</h1>
         </div>
         {/* description area */}
         <div className='description'>
