@@ -1,22 +1,42 @@
 [
     {
         "id": 0,
-        "title": "Project1",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+        "title": "Crafting Interpreters",
+        "description": "Currently reading the textbook Crafting Interpreters by Robert Nystrom, so learning how interpreters work (via parsing, tokenizing, context-free grammars, etc.). So, I am building an interpreter through Java for Nystrom's fake programming language Lox, and in the future, using C.",
+        "is_shader": false
     },
     {
         "id": 1,
-        "title": "Project2",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+        "title": "Shaders",
+        "description": "In Summer of 2024, I learned from thebookofshaders.com how to design and code shaders using OpenGL, using techniques like shaping functions, deterministic randomness, cellular noise, and fractal Brownian motion. I programmed Voronoi diagrams, the Mandelbrot set, and various cool-looking motions. Click on the shaders to cycle through some of the ones I made (and try moving your mouse over some!).",
+        "is_shader": true,
+        "content": [
+            "cells_wall.frag",
+            "fbm_orange.frag",
+            "fbm_clouds.frag",
+            "fbm_op.frag",
+            "fbm_ow.frag",
+            "cellular_noise.frag",
+            "mandelbrot_set.frag",
+            "fbm_mosaic.frag"
+        ]
     },
     {
         "id": 2,
         "title": "Project3",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum.",
+        "is_shader": false
     },
     {
         "id": 3,
         "title": "Project4",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum.",
+        "is_shader": false
+    },
+    {
+        "id": 4,
+        "title": "Project5",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum.",
+        "is_false": false
     }
 ]

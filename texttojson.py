@@ -20,7 +20,7 @@ if __name__ == "__main__":
     
     elif sys.argv[1] == '-d':
         lst = []
-        print(os.listdir(sys.argv[2]))
+        # print(os.listdir(sys.argv[2]))
         for file in os.listdir(sys.argv[2]):
             with open(f'{sys.argv[2]}/{file}') as f:
                 shader = {"name": file, "data": f.read()}

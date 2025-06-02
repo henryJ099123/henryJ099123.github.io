@@ -4,12 +4,24 @@
   color: rgb(74, 68, 68);
   font-family:Arial, Helvetica, sans-serif;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   /* padding: 0 2em; */
   text-align: center;
-  background-color: #fcfcfc
+  background-color: #fcfcfc;
+  --accent-color: rgb(255, 51, 0);
+  --black-color: rgb(20,20,20);
+  --text-color: rgb(74, 68, 68);
+  --transition-time: 200ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-less {
+  scroll-margin-top: 80px;
 }
 
 .logo {
@@ -42,8 +54,12 @@
 
 .card {
   padding: 1em;
-  display: inline;
+  /* display: inline; */
   align-content: center;
+  top: 0;
+  left: 0;
+  /* height: min-content; */
+  width: min-content;
   outline: 1px solid orange
 }
 
@@ -66,64 +82,127 @@
   width: 100%;
   top: 0;
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(171, 128, 98);
-  outline: 1px solid rgb(30, 255, 0);
+  background-color: var(--black-color);
+  /* outline: 1px solid rgb(30, 255, 0); */
   z-index: 2;
+}
+
+.left-nav-items {
+  display: flex;
+  /* gap: 10px; */
+  align-items: center;
+}
+
+.right-nav-items {
+  display: flex;
+  flex-direction: row-reverse;
+  /* gap: 10px; */
+  align-items: center;
 }
 
 .nav-item {
   margin: auto;
-  float: left;
-  padding: 1% 2%;
-  outline: 1px solid red
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100px;
+  height: 50px;
+  transition-duration: var(--transition-time);
 }
 
-.nav-item-r {
+.nav-item-github {
   margin: auto;
-  float: right;
-  padding: 1% 2%;
-  outline: 1px solid red
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100px;
+  height: 50px;
+  transition-duration: var(--transition-time);
+}
+
+.nav-item-github:hover {
+  background-color: var(--accent-color);
+}
+
+.nav-item-github:hover .github {
+  content: url("/src/assets/github-mark/github-mark.svg");
+  width: 20px;
+  height: 20px;
+}
+
+.nav-item-linkedin {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100px;
+  height: 50px;
+  transition-duration: var(--transition-time);
+}
+
+.nav-item-linkedin:hover {
+  background-color: var(--accent-color);
+}
+
+.nav-item-linkedin:hover .linkedin {
+  content: url("/src/assets/in-logo/InBug-Black.png");
+  width: 20px;
+  height: 20px;
 }
 
 .nav-item:hover {
-  background-color: rgb(135, 102, 78);
-}
-
-.nav-item-r:hover {
-  background-color: rgb(135, 102, 78);
+  background-color: var(--accent-color);
+  color: black;
 }
 
 .text-box {
-  flex: 1 1 400px;
+  flex: 1 1 200px;
   /* height: 500px; */
-  max-width: 700px;
+  max-width: 400px;
   min-width: 200px;
-  padding: 2em;
-  outline: 2px solid green
+  padding: 1em 2em;
+  outline: 2px solid green;
+  /* background-color: red; */
 }
 
 .headers {
   display: flex;
   /* min-width: 200px; */
-  padding: 0 1em;
-  height: fit-content;
+  /* width: 100%; */
+  margin: 0 -10em;
+  flex-direction: row;
   text-align: center;
   justify-content: center;
-  /* align-items: center; */
-  outline: 2px solid rgb(43, 32, 32)
+  height: 75px;
+  height: fit-content;
+  align-items: center;
+  /* outline: 2px solid rgb(43, 32, 32) */
+  /* background-color: var(--); */
+  color: var(--text-color);
 }
 
 .top-part {
   position: relative; /* Needed for absolute children */
-  width: auto;
+  /* width: auto; */
   /* min-height:200px;
   max-height: 500px; */
   /* overflow: hidden; */
   margin-top: 50px;
-  margin: 0 -1em;
+  margin: 0 -10em;
   outline: 2px solid green;
 }
 
@@ -141,34 +220,60 @@
 }
 
 .shaderCanvas {
-  position: relative;
+  /* position: relative; */
   top: 0;
   left: 0;
   /* transform: translate(-100%,-50%); */
-  width: 100%;
-  height: 50%;
-  display: block;
-  outline: 5px solid red;
-  z-index: 0;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  /* display: block; */
+  /* outline: 5px solid rgb(0, 255, 21); */
+  /* z-index: 0; */
 }​
 
 .shaderBox {
   position: absolute;
-  /* width: 100%; */
-  /* width: 100%; */
+  width: 100%;
+  height: 200px;
   outline: 10px solid rgb(0, 255, 157);
   z-index: -1;
 }
 
-.description {
+.header-description {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap-reverse;
   justify-content: space-evenly;
   align-content: center;
-  /* gap: 25px; */
+  gap: 25px;
+  /* margin-top: 100px; */
+  /* padding: 100em; */
   /* margin: 0 5%; */
-  outline: 1px solid red
+  
+  scroll-margin-top: 80px;
+  outline: 2px solid red;
+  /* background-color: red; */
+}
+
+.header-image {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
+  outline: 2px solid pink;
+}
+
+.courses-as-a-whole {
+  scroll-margin-top: 80px;
+  /* background-color: black;
+  color: white; */
+  margin: 0 -10em;
+  padding: 0 10em;
+  background-color: white;
+  color: black;
 }
 
 .courses {
@@ -178,25 +283,27 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 20px;
-  outline: 1px solid rgb(71, 0, 251);
+  /* outline: 1px solid rgb(71, 0, 251); */
 }
 
 .courses-header{
   display:flex;
   flex-wrap: nowrap;
-  flex-direction: column
+  flex-direction: column;
+
 }
 
 .course-names {
   list-style-type: none;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  width: min-content;
+  justify-content: center;
+  align-self: flex-start;
   flex-grow: 1;
-  outline: 1px solid yellow;
+  /* outline: 1px solid yellow; */
 }
 
 .course-ind {
@@ -206,17 +313,53 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  font-size: 1em;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   /* align-content: left; */
   /* gap: 25px; */
   padding: 0 10px;
-  outline: 1px solid red
+  /* outline: 1px solid red */
+  background-color: var(--black-color);
+  color: white;
+  cursor: pointer;
+  transition-duration: var(--transition-time);
 }
 
 .course-ind:hover {
-  background-color: aliceblue;
+  background-color: var(--accent-color);
+  color: black;
+}
+
+.course-ind:visited {
+  background-color: var(--accent-color);
+  color: black;
+}
+
+.course-content-image {
+  max-width: 300px;
+  max-height: 500px;
+}
+
+/* .course-content-embed-box {
+
+} */
+
+.course-content-embed {
+  /* flex: 1 1 300px; */
+  cursor: pointer;
+  background-color: var(--black-color);
+  color: white;
+  padding: 1em;
+  border-radius: 10px;
+  /* max-width: 640px;
+  height: 480px; */
+}
+
+.course-content-embed:hover {
+  background-color: var(--accent-color);
+  color: black;
 }
 
 .course-text {
@@ -226,7 +369,12 @@
   flex-grow: 2;
   /* flex-shrink: 4; */
   flex: 1 1 300px;
-  outline: 2px solid salmon;
+  /* outline: 2px solid salmon; */
+}
+
+.course-title {
+  text-align: center;
+  font-size: 1.1em;
 }
 
 .course-description {
@@ -238,13 +386,13 @@
   align-content: center;
   justify-content: space-around;
   gap: 20px;
-  flex: 1 1 300px;
+  flex: 2 1 300px;
   /* height: auto; */
   /* flex-grow: 2; */
   /* max-width: 500px; */
   min-width: 100px;
   padding: 10px;
-  outline: 2px solid rgb(0, 255, 64)
+  /* outline: 2px solid rgb(0, 255, 64) */
 }
 
 .experiences {
@@ -303,7 +451,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-content: center;
-  gap: 25px;
+  /* gap: 25px; */
   /* margin: 0 5%; */
   outline: 1px solid red
 }
@@ -315,7 +463,7 @@
   max-width: 300px;
   /* width: max-content; */
   /* min-width: 100px; */
-  padding: 0 1em;
+  /* padding: 0 1em; */
   outline: 3px solid green
 }
 
@@ -337,11 +485,35 @@
   padding: auto;
 }
 
+.avatar-big {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: center;
+  padding: auto;
+}
+
 .everything-box {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1em;
-  padding: 1em 1em;
+  padding: 1em 10em;
+}
+
+@media screen and (max-width: 700px) {
+  .everything-box {
+    padding: 1em 1em;
+  }
+  .top-part {
+    margin: 0 -1em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .course-content-embed {
+    flex: 1 1 300px;
+  }
 }
 
