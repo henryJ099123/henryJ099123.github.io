@@ -1,10 +1,11 @@
 [
     {
         "id": 0,
-        "employer": "employer1",
-        "title": "jobtitle1",
-        "time": "asdf-adsfaf",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+        "employer": "Domer Rover Engineering Club",
+        "title": "Radio and Communications Lead",
+        "time": "May 2024 - May 2025",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum.",
+        "embed": "https://www.youtube.com/embed/hucJjNddpHI?si=pdjk5AEvFAzoesC2"
     },
     {
         "id": 1,

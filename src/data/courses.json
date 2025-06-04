@@ -14,7 +14,7 @@
     {
       "id": 2,
       "name": "Abstract Algebra",
-      "description": "An introduction to groups, rings and fields. Topics include permutations, divisibility, modular arithmetic, cryptography, cyclic and dihedral groups, Lagrange's theorem, homomorphisms, ideals, integral and Euclidean domains, extension fields. My final paper for the class at right was a research and discussion on Boolean algebras that culminated in a proof of isomorphism between some set and the power set both as Boolean algebras and Boolean rings.",
+      "description": "An introduction to groups, rings and fields. Topics include permutations, divisibility, modular arithmetic, cryptography, cyclic and dihedral groups, Lagrange's theorem, homomorphisms, ideals, integral and Euclidean domains, extension fields. My <a href=\"/finalProject.pdf\" target=\"_blank\">final paper</a> for the class was a research and discussion on Boolean algebras that culminated in a proof of isomorphism between Boolean algebras and the power set and between Boolean rings and the power set.",
       "embed": "https://drive.google.com/file/d/12lh-QFI0xYgoo7pAFhfDKFNCwTZmITbM/preview",
       "link": "/finalProject.pdf"
     },
