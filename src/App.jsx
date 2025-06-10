@@ -19,29 +19,33 @@ function HamburgerButton({ onClick }) {
   </div>)
 }
 
-function HamburgerNavigation({ shouldShow, exitClick }) {
-  let move_bar
+function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) {
+  let style_var
   if (shouldShow) {
-    move_bar = "0"
+    style_var = {"left" : "0"}
   }
   else {
-    move_bar = "-21em"
+    style_var = {"left": "-30em"}
   }
-  return (<ul className='hamburger-navigation' style={{"left": move_bar}}>
+  return (<ul className='hamburger-navigation' style={style_var}>
       <li className='top-hamburger-nav-item'><img className='cross' onClick={exitClick} src={crossWhite}/></li>
-      <a href="#about-me"><li className='hamburger-nav-item' onClick={exitClick}>about me</li></a>
-      <a href="#courses"><li className='hamburger-nav-item' onClick={exitClick}>courses</li></a>
-      <a href="#experience"><li className='hamburger-nav-item' onClick={exitClick}>experience</li></a>
-      <a href="#projects"><li className='hamburger-nav-item' onClick={exitClick}>projects</li></a>
-      <a href="/finalProject.pdf"><li className='hamburger-nav-item'>
+      <a href="#about-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "su me" : "about me"}</li></a>
+      <a href="#courses"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "corsi" : "courses"}</li></a>
+      <a href="#experience"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "esperienzi" : "experiences"}</li></a>
+      <a href="#projects"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "progetti" : "projects"}</li></a>
+      <a href="#contact-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "mi contatti" : "contact me"}</li></a>
+      <a href="/finalProject.pdf" target="_blank"><li className='hamburger-nav-item'>
         resumé
       </li></a>
-      <a href="https://github.com/henryJ099123"><li className='hamburger-nav-item-github'>
+      <a href="https://github.com/henryJ099123" target="_blank"><li className='hamburger-nav-item-github'>
         <img src={githubLogoWhite} className='hamburger-github'/>
       </li></a>
-      <a href="https://www.linkedin.com/in/henry-jochaniewicz/"><li className='hamburger-nav-item-linkedin'>
+      <a href="https://www.linkedin.com/in/henry-jochaniewicz/" target="_blank"><li className='hamburger-nav-item-linkedin'>
         <img src={linkedinLogo} className='hamburger-linkedin'/>
       </li></a>
+      <li className='hamburger-nav-item-language' onClick={() => {setIsItalian(!isItalian); exitClick();}}>
+        {isItalian ? "EN" : "IT"}
+      </li>
   </ul>)
 }
 
@@ -64,12 +68,12 @@ function GenerateProjectImage({project, shaders, shaderIndex, onClickShader}) {
 }
 
 //projects: do header, description, and then photo (for now)
-function ListOfProjects({projects, shaders, shaderIndices, onClickShader}) {
+function ListOfProjects({projects, shaders, shaderIndices, onClickShader, isItalian}) {
   const listItems = projects.map(project =>
     <li key={project.id} className='project-ind'>
       <h4 className='project-title'>{project.title}</h4>
       <div className='description-project'>
-        <p dangerouslySetInnerHTML={{__html: project.description}} className='text-box-project'/>
+        <p dangerouslySetInnerHTML={{__html: !isItalian ? project.description : project.description_italian}} className='text-box-project'/>
         <GenerateProjectImage project={project} shaders={shaders}
           shaderIndex={shaderIndices[project.id] || 0}
           onClickShader={() => onClickShader(project.id, project.content.length)}/>
@@ -86,33 +90,30 @@ function GenerateExperienceImage({embed, image}) {
   } else if(image) {
     return <div className='card'><img src={image}/></div>
   } else {
-    return <></>
+    return null
   }
 }
 function ListOfExperiences({experiences}) {
   const listItems = experiences.map(experience => 
-    <li key={experience.id} className='experiences-ind'>
-      <div className='experiences-meta'>
-        <div className='experiences-titles'>
-          <h4 className='experiences-employer'>{experience.employer}</h4>
-          <h5 className='experiences-title'>{experience.title}</h5>
-        </div>
+    <li key={experience.id} className='experiences-ind' >
+      <div className='experiences-titles'>
+        <h4 className='experiences-employer'>{experience.employer}</h4>
+        <h5 className='experiences-title'>{experience.title}</h5>
         <h5 className='experiences-time'>{experience.time}</h5>
       </div>
       <div className='experiences-content'>
         <p className='experiences-description'>{experience.description}</p>
-        <GenerateExperienceImage embed={experience.embed}/>
+        <GenerateExperienceImage embed={experience.embed} image={experience.image}/>
       </div>
-
     </li>
   )
   return <ul className='experiences'>{listItems}</ul>
 }
 
-function ListOfCourses({courses, updater}) {
+function ListOfCourses({courses, updater, isItalian}) {
   const listItems = courses.map(course =>
     <li key={course.id} className='course-ind' onClick={() => updater(course.id)}>
-      <p>{course.name}</p>
+      <p>{isItalian ? course.name_italian : course.name}</p>
     </li>
   )
   return <ul className='course-names'>{listItems}</ul>
@@ -126,18 +127,6 @@ function CourseDescription({image, embed, link, children}) {
       content = <a href={link}>{content}</a>
     }
   }
-  // else if (embed) {
-  //   let a = <></>
-  //   // content = (
-  //   //     <a className='course-content-embed' src=link}>Open Content</a>
-  //   //   )
-  //   if (link) {
-  //     content = (
-  //       <a href={link} target='_blank' className='course-content-embed'>open content</a>
-  //     )
-  //   }
-
-  // }
 
   return (
   <div className='course-description'>
@@ -192,6 +181,65 @@ const GlslCanvasComponent = ({ shader, updater }) => {
   );
 };
 
+function AboutMe({isItalian}) {
+  if(isItalian) {
+    return (
+    <p>
+      Sono uno studente di secondo anno presso l'Università di Notre Dame che studia
+      informatica presso il College of Engineering con una materia secondaria 
+      in teologia. La mia cosa preferita da fare è risolvere i problemi,
+      soprattutto quelli difficili. Seguo corsi di matematica
+      per il gusto di farlo, e mi godo visualizzare quella matematica
+      nel codice. Al di fuori i corsi, sono un grande fan dei film (guarda il mio
+      <a href="https://letterboxd.com/henryj099/" target="_blank"> Letterboxd</a>),
+      soprattutto Studio Ghibli (<it>Howl's Moving Castle</it>) e
+      Alfred Hitchcock (<it>Rear Window</it>). I miei videogiochi favoriti
+      sono basati sulla storia o sono centrati su enigmi e conoscenze
+      (come <it>Outer Wilds, Bioshock, Hollow Knight</it>). Oltre a questo, mi piace
+      insegnare a suonare il pianoforte, piegare origami o praticare l'italiano. 
+    </p>
+    )
+  }
+  return (
+    <p>
+    I am a current sophomore at the University 
+    of Notre Dame studying computer science
+    in the College of Engineering with a minor in Theology.
+    My favorite thing to do is solve problems,
+    especially the hard ones.
+    I take math classes as my electives for fun and enjoy 
+    to visualize that math in code.
+    Outside of classes, I'm a big fan of films (check out my 
+    <a href="https://letterboxd.com/henryj099/" target="_blank"> Letterboxd</a>),
+    especially Studio Ghibli
+    (<i>Howl's Moving Castle</i>)
+    and Alfred Hitchcock (<i>Rear Window</i>).
+    My favorite video games are story-based or centered around puzzles and knowledge
+    (e.g. <i>Outer Wilds</i>, <i> Bioshock</i>, <i>Hollow Knight</i>).
+    Beyond that, I like to teach myself piano, fold origami, or practice
+    my Italian.
+    </p>
+  )
+}
+
+function ContactMeText({isItalian}) {
+  if(isItalian) {
+    return (<p style={{margin: "0"}}>
+      Mille grazie per aver controllato il mio sito! Inviami un email a 
+      &#32;<a href="mailto:hjochani@nd.edu" target='_blank'>hjochani@nd.edu</a>&#32;
+      per contattarmi per qualsiasi ragione, sia che su qualcosa di professionale o accademico
+      o se devi parlare con qualcuno dell'eccellenza degli scritti di Kurt Vonnegut.
+      </p>)
+  }
+  return (<p style={{margin: "0"}}>
+  Thanks for checking out my site! Send me an email at
+  &#32;<a href="mailto:hjochani@nd.edu" target='_blank'>hjochani@nd.edu</a>&#32;
+  to contact me whether for any reason, whether about something professional, academic,
+  or if you really need to talk to someone about how amazing Kurt Vonnegut's
+  writing is.
+  </p>)
+}
+
 function getShaderByName(shaders, name) {
   return shaders.find((shader) => shader.name === name).data
 }
@@ -204,80 +252,60 @@ function App() {
       ...prev,
       [projectId]: ((prev[projectId] + 1) || 1) % maxIndex
     }))
-    console.log(projectId)
-    console.log(shaderIndices[projectId])
-    console.log(shaderIndices)
-    console.log("-----")
   }
 
   const [courseIndex, setCourseIndex] = useState(0)
+  const [isItalian, setIsItalian] = useState(false)
   let curr_course = courses.find((course) => course.id === courseIndex)
   let curr_shader = shaders.find((shader) => shader.name === "fbm_op.frag").data
   const [hamburgerNavOpen, setHamburgerNavOpen] = useState(false)
   function updateHamNav() {
     setHamburgerNavOpen(prev => !prev)
-    console.log(hamburgerNavOpen)
   }
+  
+  window.addEventListener('resize', () => {
+    if(window.innerWidth > 751) {
+      setHamburgerNavOpen(false)
+    }
+  })
 
   return (
     <>
       {/* Navigation Bar */}
       <ul className='navigation'>
         <div className='left-nav-items'>
-          <a href="#about-me"><li className='nav-item'>about me</li></a>
-          <a href="#courses"><li className='nav-item'>courses</li></a>
-          <a href="#experience"><li className='nav-item'>experience</li></a>
-          <a href="#projects"><li className='nav-item'>projects</li></a>
+          <a href="#about-me"><li className='nav-item'>{isItalian ? "su me" : "about me"}</li></a>
+          <a href="#courses"><li className='nav-item'>{isItalian ? "corsi" : "courses"}</li></a>
+          <a href="#experience"><li className='nav-item'>{isItalian ? "esperienzi" : "experiences"}</li></a>
+          <a href="#projects"><li className='nav-item'>{isItalian ? "progetti" : "projects"}</li></a>
+          <a href="#contact-me"><li className='nav-item'>{isItalian ? "mi contatti" : "contact me"}</li></a>
         </div>
         <div className='right-nav-items'>
-          <a href="https://www.linkedin.com/in/henry-jochaniewicz/"><li className='nav-item-linkedin'>
-            <img className='linkedin' src={linkedinLogo} width={20} height={20}/>
+          <li className='nav-item-language' onClick={() => setIsItalian(!isItalian)}>{isItalian ? "EN" : "IT"}</li>
+          <a href="https://www.linkedin.com/in/henry-jochaniewicz/" target="_blank"><li className='nav-item-linkedin'>
+            <img className='linkedin' src={linkedinLogo} width={24} height={24}/>
           </li></a>
-          <a href="https://github.com/henryJ099123"><li className='nav-item-github'>
-            <img className='github' src={githubLogoWhite} width={20} height={20}/>
+          <a href="https://github.com/henryJ099123" target="_blank"><li className='nav-item-github'>
+            <img className='github' src={githubLogoWhite} width={24} height={24}/>
           </li></a>
-          <a href="/finalProject.pdf"><li className='nav-item'>
+          <a href="/finalProject.pdf" target="_blank"><li className='nav-item'>
             resumé
           </li></a>
         </div>
       </ul>
 
+      {/* The Hamburger Menu Section*/}
       <HamburgerButton onClick={() => updateHamNav()}/>
-      <HamburgerNavigation shouldShow={hamburgerNavOpen} exitClick={updateHamNav}/>
+      <HamburgerNavigation shouldShow={hamburgerNavOpen} exitClick={updateHamNav} isItalian={isItalian} setIsItalian={setIsItalian}/>
 
       <div className='everything-box'>
-        {/* the top part with my name and stuff */}
-        {/* <div className='top-part'>
-          <GlslCanvasComponent className='glslCanvas' shader={curr_shader}/>
-          <div className="top-part-name">
-            <h1>Henry Jochaniewicz</h1>
-            <h3>I did in fact make that. applause please</h3>
-          </div>
-        </div> */}
-        {/* description area */}
-
-        <div  id='about-me' className='header-description'>
+        
+        {/* About me section */}
+        <div id='about-me' className='header-description'>
           <div className='text-box'>
             <h4>about me</h4>
             <div>
-              <p>
-                I am a current sophomore at the University 
-                of Notre Dame studying computer science
-                in the College of Engineering with a minor in Theology.
-                My favorite thing to do is solve problems,
-                especially the hard ones.
-                I take math classes as my electives for fun and enjoy 
-                to visualize that math in code.
-                Outside of classes, I'm a big fan of films (check out my 
-                <a href="https://letterboxd.com/henryj099/"> Letterboxd</a>),
-                especially Studio Ghibli
-                (<i>Howl's Moving Castle</i>)
-                and Alfred Hitchcock (<i>Rear Window</i>).
-                My favorite video games are story-based or centered around puzzles and knowledge
-                (e.g. <i>Outer Wilds</i>, <i> Bioshock</i>, <i>Hollow Knight</i>).
-                Beyond that, I like to teach myself piano, fold origami, or practice
-                my Italian.
-              </p>
+              <AboutMe isItalian={isItalian}/>
             </div>
           </div>
           <div className='header-image'>
@@ -289,20 +317,29 @@ function App() {
         </div>
 
         {/* Relevant coursework */}
-        <div id='courses' className='courses-as-a-whole'>
+        <div id='courses' className='scroll-less'>
           <div className='headers'>
             <h4>relevant coursework</h4>
           </div>
-          <div className='courses'> 
-            <ListOfCourses courses={courses} updater={setCourseIndex}/>
-            <CourseDescription embed={curr_course.embed} image={curr_course.image} link={curr_course.link}>
-              <p className='course-title'><b>{curr_course.name}</b></p>
-              <p dangerouslySetInnerHTML={{__html: curr_course.description}}></p>
-            </CourseDescription>
+          <div className='courses-as-a-whole'>
+            <div className='courses'> 
+              <ListOfCourses courses={courses} updater={setCourseIndex} isItalian={isItalian}/>
+              <CourseDescription embed={curr_course.embed} image={curr_course.image} link={curr_course.link}>
+                <p className='course-title'><b>{isItalian ? curr_course.name_italian : curr_course.name}</b></p>
+                <p dangerouslySetInnerHTML={{__html: isItalian ? curr_course.description_italian : curr_course.description}}></p>
+              </CourseDescription>
+            </div>
+            <div className='contact-me-text'>
+              Some other courses I have taken:
+              Engineering Design, Logic Design and Sequential Circuits, Calculus III,
+              Intro to Linear Algebra and Differential Equations,
+              Computer Architecture, Intro to Probability, Real Analysis, Eschatology
+            </div>
           </div>
+
         </div>
 
-        {/* maybe the work stuff now? */}
+        {/* experiences */}
         <div id='experience' className='scroll-less'>
           <div className='headers'>
             <h4>experience</h4>
@@ -314,13 +351,37 @@ function App() {
         <div id='projects' className='scroll-less'>
           <div className='headers'>
             <h4>current projects</h4>
+            <p className='contact-me-text'>
+              Here are some of my most projects.
+              I really like mixing together mathematics and computer science,
+              so some of my projects have been related to <em>computer graphics</em>&#32;
+              or to <em>mathematical visualizations</em>.
+              I also appreciate learning about low-level, behind-the-scenes
+              topics and learning how to construct the abstractions
+              that we take for granted.
+            </p>
           </div>
-          <ListOfProjects 
+        </div>
+        <ListOfProjects 
             projects={projects} 
             shaders={shaders} 
             shaderIndices={shaderIndices}
-            onClickShader={updateShaderIndex}/>
-        </div>
+            onClickShader={updateShaderIndex}
+            isItalian={isItalian}/>
+          {/* Contact Me section */}
+          <div id='contact-me' className='scroll-less'>
+            <div className='headers'>
+              <h4>contact me</h4>
+            </div>
+            <div className='contact-me-text'>
+              <ContactMeText isItalian={isItalian}/>
+            </div>
+          </div>
+
+          <div className='credits'>
+            <hr className='credits-line'></hr>
+            <p>Copyright &copy;2025 Henry Jochaniewicz. All rights reserved.</p>
+          </div>
       </div>
 
     </>

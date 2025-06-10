@@ -1,31 +1,31 @@
 [
     {
         "id": 0,
-        "employer": "Domer Rover Engineering Club",
-        "title": "Radio and Communications Lead",
-        "time": "May 2024 - May 2025",
-        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum.",
-        "embed": "https://www.youtube.com/embed/hucJjNddpHI?si=pdjk5AEvFAzoesC2"
+        "employer": "IRES 2025 Research Program",
+        "title": "Undergraduate Researcher",
+        "time": "May 2025 - August 2025",
+        "description": "This is a research internship under Dr. Michael Niemier that took place in Lyon, France, partnered with Ecolè Centrale de Lyon. With four other undergraduate students, I benchmarked various figures of merit for different AES hardware accelerators and developed Python files and Google Colab sessions to automatically generate graphs of desired data points. Beyond the research, being in France for two months was an incredible opportunity to engage with international students and a brand-new culture (and learn a bit of French)."
     },
     {
         "id": 1,
-        "employer": "employer2",
-        "title": "jobtitle2",
-        "time": "asdf-adsfaf",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+        "employer": "Domer Rover Engineering Club",
+        "title": "Radio and Communications Lead and Club Member",
+        "time": "September 2023 - May 2025",
+        "description":"Domer Rover is an engineering build club where our goal is to build a rover for the University Rover Competition. I served as the Radio and Communications Lead this past year, so I taught myself all about radios, earned a Technician-level Ham radio license, and developed a communication network between the rover and our base station over two frequency bands. The 900MHz band was essentially serial, so I designed a single-stream message-based weighted-round-robin communication system to accomodate this and handle any potential dips in communication. Testing showed this system works at over a kilometer distance! Check out our SAR to the right.",
+        "embed": "https://www.youtube.com/embed/hucJjNddpHI?si=pdjk5AEvFAzoesC2"
     },
     {
         "id": 2,
-        "employer": "employer3",
-        "title": "jobtitle3",
-        "time": "asdf-adsfaf",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+        "employer": "University of Notre Dame",
+        "title": "Undergraduate Teaching Assistant",
+        "time": "August 2024 - Present",
+        "description": "In Fall of 2024, I was a teaching assistant for Discrete Mathematics for a class of about 50 students. I held office hours once a week, coordinated with four other TAs and the instructor, and taught myself content new to this semester in order to help students. In Spring 2025, I was a grader for Magic of Numbers, a mathematics seminar for about fifteen first-year students. For Fall 2025, I will be a Fundamentals of Computing TA for second-years."
     },
     {
         "id": 3,
-        "employer": "employer4",
-        "title": "jobtitle4",
-        "time": "asdf-adsfaf",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque faucibus neque nec vehicula. Nullam egestas maximus commodo. Proin rutrum eros laoreet turpis vulputate venenatis rutrum id lectus. Quisque laoreet nulla vel mauris accumsan, vel laoreet odio auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan euismod purus sit amet malesuada. Mauris blandit risus ut massa iaculis condimentum."
+        "employer": "University of Notre Dame",
+        "title": "Conversations of Purpose Mentor",
+        "time": "August 2024 - December 2024",
+        "description": "The Foundations of Theology class I took included a weekly conversation with members of the same dorm. I served as a co-lead for these conversations with the members of Sorin College, my university dorm, fostering conversations about theology, faith, and the ways they relate to personal life for six first-years."
     }
 ]
