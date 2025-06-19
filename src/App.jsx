@@ -156,7 +156,7 @@ const GlslCanvasComponent = ({ shader, updater }) => {
     const sandbox = new GlslCanvas(canvas);
 
     resizer(canvas, container);
-    canvas.height = container.getBoundingClientRect().height * window.devicePixelRatio;
+    // canvas.height = container.getBoundingClientRect().height * window.devicePixelRatio;
     sandbox.load(shader);
 
     const handler = () => {
@@ -192,8 +192,9 @@ function AboutMe({isItalian}) {
       per il gusto di farlo, e mi godo visualizzare quella matematica
       nel codice. Al di fuori i corsi, sono un grande fan dei film (guarda il mio
       <a href="https://letterboxd.com/henryj099/" target="_blank"> Letterboxd</a>),
-      soprattutto Studio Ghibli (<it>Howl's Moving Castle</it>) e
-      Alfred Hitchcock (<it>Rear Window</it>). I miei videogiochi favoriti
+      soprattutto Studio Ghibli (<it>Howl's Moving Castle</it>),
+      Alfred Hitchcock (<it>Rear Window</it>) ma mi piace anche altri film
+      (<i>La vita è bella</i>, <i>Amarcord</i>). I miei videogiochi favoriti
       sono basati sulla storia o sono centrati su enigmi e conoscenze
       (come <it>Outer Wilds, Bioshock, Hollow Knight</it>). Oltre a questo, mi piace
       insegnare a suonare il pianoforte, piegare origami o praticare l'italiano. 
@@ -212,8 +213,8 @@ function AboutMe({isItalian}) {
     Outside of classes, I'm a big fan of films (check out my 
     <a href="https://letterboxd.com/henryj099/" target="_blank"> Letterboxd</a>),
     especially Studio Ghibli
-    (<i>Howl's Moving Castle</i>)
-    and Alfred Hitchcock (<i>Rear Window</i>).
+    (<i>Howl's Moving Castle</i>, <i>Spirited Away</i>)
+    and Alfred Hitchcock (<i>Rear Window</i>, <i>Vertigo</i>).
     My favorite video games are story-based or centered around puzzles and knowledge
     (e.g. <i>Outer Wilds</i>, <i> Bioshock</i>, <i>Hollow Knight</i>).
     Beyond that, I like to teach myself piano, fold origami, or practice
