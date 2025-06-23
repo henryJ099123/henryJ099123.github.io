@@ -34,7 +34,7 @@ function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) 
       <a href="#experience"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "esperienzi" : "experiences"}</li></a>
       <a href="#projects"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "progetti" : "projects"}</li></a>
       <a href="#contact-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "mi contatti" : "contact me"}</li></a>
-      <a href="/finalProject.pdf" target="_blank"><li className='hamburger-nav-item'>
+      <a href="/resume.pdf" target="_blank"><li className='hamburger-nav-item'>
         resumé
       </li></a>
       <a href="https://github.com/henryJ099123" target="_blank"><li className='hamburger-nav-item-github'>
@@ -289,7 +289,7 @@ function App() {
           <a href="https://github.com/henryJ099123" target="_blank"><li className='nav-item-github'>
             <img className='github' src={githubLogoWhite} width={24} height={24}/>
           </li></a>
-          <a href="/finalProject.pdf" target="_blank"><li className='nav-item'>
+          <a href="/resume.pdf" target="_blank"><li className='nav-item'>
             resumé
           </li></a>
         </div>
