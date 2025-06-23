@@ -331,7 +331,7 @@ function App() {
               </CourseDescription>
             </div>
             <div className='contact-me-text'>
-              Some other courses I have taken:
+              Here are some other courses I have taken:
               Engineering Design, Logic Design and Sequential Circuits, Calculus III,
               Intro to Linear Algebra and Differential Equations,
               Computer Architecture, Intro to Probability, Real Analysis, Eschatology
