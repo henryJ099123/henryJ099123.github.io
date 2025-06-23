@@ -96,6 +96,17 @@ em {
   /* outline: 1px solid orange */
 }
 
+.card-big {
+  padding: 1em;
+  /* display: inline; */
+  /* align-content: right; */
+  top: 25%;
+  left: 0;
+  /* height: min-content; */
+  width: min-content;
+  /* outline: 1px solid orange */
+}
+
 .list {
   text-align: left;
   height: 2em;
@@ -882,8 +893,9 @@ a .hamburger-nav-item {
 
 .avatar-big {
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
+  top: 0;
+  object-fit:cover;
+  object-position: 0 0;
   outline: 2px solid var(--accent-color);
   padding: auto;
 }

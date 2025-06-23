@@ -6,7 +6,7 @@ import hamburgerWhite from './assets/hamburger_white.svg'
 import hamburgerBlack from './assets/hamburger_black.svg'
 import crossWhite from './assets/cross_white.svg'
 import crossBlack from './assets/cross_black.svg'
-import profilePic from './assets/moses.jpeg'
+import profilePic from './assets/me_grad.jpg'
 import courses from './data/courses.json'
 import projects from './data/projects.json'
 import shaders from './data/shaders.json'
@@ -43,9 +43,9 @@ function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) 
       <a href="https://www.linkedin.com/in/henry-jochaniewicz/" target="_blank"><li className='hamburger-nav-item-linkedin'>
         <img src={linkedinLogo} className='hamburger-linkedin'/>
       </li></a>
-      <li className='hamburger-nav-item-language' onClick={() => {setIsItalian(!isItalian); exitClick();}}>
+      {/* <li className='hamburger-nav-item-language' onClick={() => {setIsItalian(!isItalian); exitClick();}}>
         {isItalian ? "EN" : "IT"}
-      </li>
+      </li> */}
   </ul>)
 }
 
@@ -282,7 +282,7 @@ function App() {
           <a href="#contact-me"><li className='nav-item'>{isItalian ? "mi contatti" : "contact me"}</li></a>
         </div>
         <div className='right-nav-items'>
-          <li className='nav-item-language' onClick={() => setIsItalian(!isItalian)}>{isItalian ? "EN" : "IT"}</li>
+          {/* <li className='nav-item-language' onClick={() => setIsItalian(!isItalian)}>{isItalian ? "EN" : "IT"}</li> */}
           <a href="https://www.linkedin.com/in/henry-jochaniewicz/" target="_blank"><li className='nav-item-linkedin'>
             <img className='linkedin' src={linkedinLogo} width={24} height={24}/>
           </li></a>
@@ -311,7 +311,7 @@ function App() {
           </div>
           <div className='header-image'>
             <h3>Henry Jochaniewicz</h3>
-            <div className='card'>
+            <div className='card-big'>
               <img src={profilePic} className='avatar-big'/>
             </div>
           </div>
