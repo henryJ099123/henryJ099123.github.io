@@ -25,10 +25,10 @@
     {
         "id": 2,
         "title": "Infinite Sum Visualizer",
-        "description": "When I was a kid, I developed a Processing applet with Java to display some infinite sum formula with Complex inputs on the Complex plane. I decided to recently rebuild it using Python for a cleaner look, smoother interactivity, and practice with magic method overloading. The graph is interactable with the radius of convergence plotted as well. Check it out by clicking <a href=\"https://github.com/henryJ099123/InfSumsVisualized\" target=\"_blank\">here</a> or on the picture.",
+        "description": "When I was a kid, I developed a Processing applet with Java to display some infinite sum formula with Complex inputs on the Complex plane. I decided to recently rebuild it using Python for a cleaner look, smoother interactivity, and practice with magic method overloading. The graph is interactable with the radius of convergence plotted as well. Check it out as a <a href=\"https://colab.research.google.com/drive/1W_epJyG46opPre7LBc9gb4xm6BCMwvWP?usp=sharing\" target=\"_blank\">Google Colab</a> by clicking the picture, or see the <a href=\"https://github.com/henryJ099123/InfSumsVisualized\">repository</a> itself.",
         "is_shader": false,
         "content": "/graph.svg",
-        "link": "https://github.com/henryJ099123/InfSumsVisualized"
+        "link": "https://colab.research.google.com/drive/1W_epJyG46opPre7LBc9gb4xm6BCMwvWP?usp=sharing"
     },
     {
         "id": 3,
