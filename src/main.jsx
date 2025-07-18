@@ -8,7 +8,7 @@ import Blog from './Blog.jsx'
 
 function AllRouter({ blogs }) {
   const listBlogs = blogs.map(blog => 
-	<Route path={blog.urlname} element={<><Blog index={blog.id}/></>}/>)
+	<Route key={blog.id} path={blog.urlname} element={<><Blog index={blog.id}/></>}/>)
   return (
   <BrowserRouter>
   	<Routes>

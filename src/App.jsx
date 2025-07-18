@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import linkedinLogo from './assets/in-logo/InBug-White.png'
 import githubLogoWhite from './assets/github-mark/github-mark-white.svg'
-import hamburgerWhite from './assets/hamburger_white.svg'
 import hamburgerBlack from './assets/hamburger_black.svg'
 import crossWhite from './assets/cross_white.svg'
 import crossBlack from './assets/cross_black.svg'
@@ -12,12 +11,7 @@ import projects from './data/projects.json'
 import shaders from './data/shaders.json'
 import experiences from './data/experience.json'
 import GlslCanvas from 'glslCanvas'
-
-function HamburgerButton({ onClick }) {
-  return (<div className="hamburger-button" onClick={onClick}>
-    <img src={hamburgerWhite} className="hamburger-picture"/>
-  </div>)
-}
+import HamburgerButton from './HamburgerButton.jsx'
 
 function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) {
   let style_var
@@ -310,7 +304,7 @@ function App() {
             </div>
           </div>
           <div className='header-image'>
-            <h3>Henry Jochaniewicz</h3>
+            <h1>Henry Jochaniewicz</h1>
             <div className='card-big'>
               <img src={profilePic} className='avatar-big'/>
             </div>

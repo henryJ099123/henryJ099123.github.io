@@ -26,6 +26,7 @@ if __name__ == "__main__":
         lst = []
         # print(os.listdir(sys.argv[2]))
         for i, file in enumerate(os.listdir(sys.argv[2])):
+            print(file)
             with open(f'{sys.argv[2]}/{file}') as f:
                 entry = {"id": i}
                 entry["urlname"] = file.split('.')[0]
