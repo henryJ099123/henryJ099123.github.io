@@ -14,13 +14,7 @@ import GlslCanvas from 'glslCanvas'
 import HamburgerButton from './HamburgerButton.jsx'
 
 function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) {
-  let style_var
-  if (shouldShow) {
-    style_var = {"left" : "0"}
-  }
-  else {
-    style_var = {"left": "-30em"}
-  }
+  const style_var = shouldShow ? {"left": "0"} : {"left": "-30em"}
   return (<ul className='hamburger-navigation' style={style_var}>
       <li className='top-hamburger-nav-item'><img className='cross' onClick={exitClick} src={crossWhite}/></li>
       <a href="#about-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "su me" : "about me"}</li></a>
@@ -290,7 +284,7 @@ function App() {
       </ul>
 
       {/* The Hamburger Menu Section*/}
-      <HamburgerButton onClick={() => updateHamNav()}/>
+      <HamburgerButton className='hamburger-button' onClick={() => updateHamNav()}/>
       <HamburgerNavigation shouldShow={hamburgerNavOpen} exitClick={updateHamNav} isItalian={isItalian} setIsItalian={setIsItalian}/>
 
       <div className='everything-box'>

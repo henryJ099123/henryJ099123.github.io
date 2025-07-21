@@ -26,6 +26,9 @@ function AllRouter({ blogs }) {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+  {/*
   <AllRouter blogs={blogs}/>
+  */}
+  <App/>
   </StrictMode>,
 )

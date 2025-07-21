@@ -113,6 +113,25 @@ a:hover {
   width: 100%;
 } 
 
+.blog-select-ham {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0.5em 1em;
+  gap: 1em;
+  height: 100%;
+  list-style-type: none;
+  font-size: 1em;
+  position: fixed;
+  background-color: white;
+  transition-duration: var(--transition-time);
+  outline: 2px solid var(--black-color);
+  .blog-select-title {
+	margin: 0
+  } 
+} 
+
 .blog-select {
   font-size: 1em;
   list-style-type: none;
@@ -134,13 +153,16 @@ a:hover {
   flex-direction: column;
   flex-wrap: nowrap;
   border-radius: 15px;
-  padding: 0.5em 0;
+  padding: 0.5em 0.5em;
   outline: 2px solid var(--accent-color);
   transition-duration: var(--transition-time);
+  color: var(--black-color);
+  font-style: normal
 } 
 
 .blog-ind:hover {
   background-color: var(--accent-color);
+  text-decoration: none;
   outline: 2px solid var(--black-color);
 } 
 
@@ -196,7 +218,7 @@ a:hover {
   overflow: visible;
 }
 
-.hamburger-button {
+.hamburger-button2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,24 +238,37 @@ a:hover {
   transition-duration: var(--transition-time);
 }
 
-.hamburger-button:hover {
+.hamburger-button2:hover {
   background-color: var(--accent-color);
   outline-color: var(--black-color);
   .hamburger-picture {
     content: url("/src/assets/hamburger_black.svg")
   }
 }
-.hamburger-button:after {
+.hamburger-button2:after {
   .hamburger-navigation {
     right: 0px;
   }
+}
+
+.ham-exit {
+  padding: 0; 
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+} 
+
+.cross {
+  cursor: pointer;
 }
 
 @media screen and (width < 630px) {
   .blog-select {
 	display: none
   } 
-  .hamburger-button {
+  .hamburger-button2 {
 	display: flex
   } 
   .main-box {
@@ -244,8 +279,11 @@ a:hover {
 } 
 
 @media screen and (width >= 630px) {
-  .hamburger-button {
+  .hamburger-button2 {
 	display: none
+  } 
+  .blog-select-ham {
+	left: -15em;
   } 
 } 
 

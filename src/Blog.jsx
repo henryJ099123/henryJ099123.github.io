@@ -1,37 +1,67 @@
 import { useState, useEffect, useRef } from 'react'
 import blogs from './data/blogs.json'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import profilePic from './assets/hiking_me.jpg'
+import crossBlack from './assets/cross_black.svg'
 import HamburgerButton from './HamburgerButton.jsx'
 import './blog.css'
 
 function BlogSelect({ blogs }) {
   const blogList = blogs.map(blog => blog.id > 5 ? <></> : 
-	<li key={blog.id + 4} className='blog-ind'>
+	<Link to={'../' + blog.urlname} key={blog.id + 4} className='blog-ind'>
 	  <div>{blog.name}</div>
 	  <i>{blog.date}</i>
-	</li>
+	</Link>
 	)
-  return <ul className='blog-select'>
-		  <h2 key={0} className='blog-select-title'>More here</h2>
-		  {blogList}
-		  <li key={1} className='blog-ind'><div>See all</div></li>
-		  <hr key={2} className='blog-line'></hr>
-		  <div key={3} className='main-page'><p>Main page</p></div>
-		 </ul>
+  return (
+	<ul className='blog-select'>
+	  <h2 key={0} className='blog-select-title'>More here</h2>
+	  {blogList}
+	  <li key={1} className='blog-ind'><div>See all</div></li>
+	  <hr key={2} className='blog-line'></hr>
+	  <div key={3} className='main-page'><p>Main page</p></div>
+	 </ul>
+	 )
+} 
+
+function BlogSelectHam({ shouldShow, blogs, exitClick }) {
+  const style_var = shouldShow ? {"left": "0"} : {"left": "-20em"}
+  const blogList = blogs.map(blog => blog.id > 5 ? <></> : 
+	<Link to={'../' + blog.urlname} key={blog.id + 5} onClick={exitClick} className='blog-ind'>
+	  <div>{blog.name}</div>
+	  <i>{blog.date}</i>
+	</Link>
+	)
+  return (
+	<ul className='blog-select-ham' style={style_var}>
+      <li className='ham-exit' id={4}><img className='cross' onClick={exitClick} src={crossBlack}/></li>
+	  <h2 key={0} className='blog-select-title'>More here</h2>
+	  {blogList}
+	  <li key={1} onClick={exitClick} className='blog-ind'><div>See all</div></li>
+	  <hr key={2} className='blog-line'></hr>
+	  <div key={3} onClick={exitClick} className='main-page'><p>Main page</p></div>
+	 </ul>
+	 )
 } 
 
 function Blog({ index }) {
   const this_blog = blogs.find((blog) => blog.id === index)
-  const [hamClick, setHamClick] = useState(true)
+  const [hamClick, setHamClick] = useState(false)
 
   function changeHamClick() {
 	return setHamClick(prev => !prev)
   } 
 
+  window.addEventListener('resize', () => {
+    if(window.innerWidth > 630) {
+      setHamClick(false)
+    }
+  })
+
   return (<>
-	<HamburgerButton onClick={setHamClick}/>
+	<HamburgerButton className="hamburger-button2" onClick={changeHamClick}/>
+	<BlogSelectHam shouldShow={hamClick} blogs={blogs} exitClick={changeHamClick}/>
   	<div className='main-box'>
 	  <BlogSelect blogs={blogs}/>
 	  <div className='blog-container'>
