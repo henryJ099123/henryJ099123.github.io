@@ -92,6 +92,14 @@ em {
   scroll-margin-top: 80px;
 }
 
+.no-underline {
+  text-decoration: none
+} 
+
+.no-underline:hover {
+  text-decoration: none
+} 
+
 .card {
   padding: 1em;
   /* display: inline; */
@@ -324,6 +332,7 @@ a .hamburger-nav-item {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   padding: 0 var(--padding-amount);
   height: 100%;
   transition-duration: var(--transition-time);

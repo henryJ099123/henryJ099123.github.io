@@ -17,12 +17,12 @@ function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) 
   const style_var = shouldShow ? {"left": "0"} : {"left": "-30em"}
   return (<ul className='hamburger-navigation' style={style_var}>
       <li className='top-hamburger-nav-item'><img className='cross' onClick={exitClick} src={crossWhite}/></li>
-      <a href="#about-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "su me" : "about me"}</li></a>
-      <a href="#courses"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "corsi" : "courses"}</li></a>
-      <a href="#experience"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "esperienzi" : "experiences"}</li></a>
-      <a href="#projects"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "progetti" : "projects"}</li></a>
-      <a href="#contact-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "mi contatti" : "contact me"}</li></a>
-      <a href="/resume.pdf" target="_blank"><li className='hamburger-nav-item'>
+      <a className='no-underline' href="#about-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "su me" : "about me"}</li></a>
+      <a className='no-underline' href="#courses"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "corsi" : "courses"}</li></a>
+      <a className='no-underline' href="#experience"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "esperienzi" : "experiences"}</li></a>
+      <a className='no-underline' href="#projects"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "progetti" : "projects"}</li></a>
+      <a className='no-underline' href="#contact-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "mi contatti" : "contact me"}</li></a>
+      <a className='no-underline' href="/resume.pdf" target="_blank"><li className='hamburger-nav-item'>
         resumé
       </li></a>
       <a href="https://github.com/henryJ099123" target="_blank"><li className='hamburger-nav-item-github'>
@@ -263,11 +263,11 @@ function App() {
       {/* Navigation Bar */}
       <ul className='navigation'>
         <div className='left-nav-items'>
-          <a href="#about-me"><li className='nav-item'>{isItalian ? "su me" : "about me"}</li></a>
-          <a href="#courses"><li className='nav-item'>{isItalian ? "corsi" : "courses"}</li></a>
-          <a href="#experience"><li className='nav-item'>{isItalian ? "esperienzi" : "experiences"}</li></a>
-          <a href="#projects"><li className='nav-item'>{isItalian ? "progetti" : "projects"}</li></a>
-          <a href="#contact-me"><li className='nav-item'>{isItalian ? "mi contatti" : "contact me"}</li></a>
+          <a className='no-underline' href="#about-me"><li className='nav-item'>{isItalian ? "su me" : "about me"}</li></a>
+          <a className='no-underline' href="#courses"><li className='nav-item'>{isItalian ? "corsi" : "courses"}</li></a>
+          <a className='no-underline' href="#experience"><li className='nav-item'>{isItalian ? "esperienzi" : "experiences"}</li></a>
+          <a className='no-underline' href="#projects"><li className='nav-item'>{isItalian ? "progetti" : "projects"}</li></a>
+          <a className='no-underline' href="#contact-me"><li className='nav-item'>{isItalian ? "mi contatti" : "contact me"}</li></a>
         </div>
         <div className='right-nav-items'>
           {/* <li className='nav-item-language' onClick={() => setIsItalian(!isItalian)}>{isItalian ? "EN" : "IT"}</li> */}
@@ -277,7 +277,7 @@ function App() {
           <a href="https://github.com/henryJ099123" target="_blank"><li className='nav-item-github'>
             <img className='github' src={githubLogoWhite} width={24} height={24}/>
           </li></a>
-          <a href="/resume.pdf" target="_blank"><li className='nav-item'>
+          <a className='no-underline' href="/resume.pdf" target="_blank"><li className='nav-item'>
             resumé
           </li></a>
         </div>
