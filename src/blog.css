@@ -11,17 +11,10 @@ body {
   /* min-height: 100vh; */
 }
 
-h1 {
-  font-size: 2.5em;
-} 
-
-h2 {
-  font-size: 2em;
-} 
-
-h3 {
-  font-size: 1.5em;
-  font-style: italic;
+code {
+  font-family: "Roboto Mono", monospace;
+  color: var(--accent-color);
+  margin: 0 0.2em;
 } 
 
 pre {
@@ -32,13 +25,27 @@ pre {
   padding: 1em 0em;
   padding-left: 1em;
   code {
-	font-size: 0.9em;
 	color: white;
+	font-size: 0.8em;
   } 
 } 
 
 a:hover {
   text-decoration: underline
+} 
+
+blockquote {
+  p {
+	margin: 0
+  } 
+  border-left: 10px solid var(--accent-color);
+  background-image: linear-gradient(to right, var(--accent-color-bg), var(--accent-color-bg-pale));
+  padding: 1em 1em;
+  margin: 0 1em;
+} 
+
+blockquote:before {
+  margin-right: 0.25em;
 } 
 
 .main-box {
@@ -121,6 +128,7 @@ a:hover {
   padding: 0.5em 1em;
   gap: 1em;
   height: 100%;
+  width: 10em;
   list-style-type: none;
   font-size: 1em;
   position: fixed;
@@ -152,7 +160,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  border-radius: 15px;
+  border-radius: 25px;
   padding: 0.5em 0.5em;
   outline: 2px solid var(--accent-color);
   transition-duration: var(--transition-time);
@@ -264,7 +272,7 @@ a:hover {
   cursor: pointer;
 }
 
-@media screen and (width < 630px) {
+@media screen and (width <= 685px) {
   .blog-select {
 	display: none
   } 
@@ -278,7 +286,7 @@ a:hover {
   } 
 } 
 
-@media screen and (width >= 630px) {
+@media screen and (width > 685px) {
   .hamburger-button2 {
 	display: none
   } 

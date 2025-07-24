@@ -14,7 +14,7 @@ a [link](www.google.com)
 
 **Bold text**
 
-`Here's some code`
+Here is `some code` inline; for example, use the `biggest.main` method.
 
 Extended code:
 ```
@@ -22,7 +22,21 @@ int x = 5;
 for(int i = 0; i < 5; i++)
     print(x);
 really.really.really.really.really.really.really.really.really.really.really.really.really.really.really.really.long.to.see.scrooll
+public static void main(String args[]) {
+    int x = 15;
+    int y = 10;
+    int z = x + y;
+    System.out.println(z);
+} 
 ```
+
+A quote:
+> I am a quote.
+
+A block quote:
+> text
+> more text
+> wow. I really am a block quote
 
 some lists:
 

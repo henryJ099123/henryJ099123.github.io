@@ -6,9 +6,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--black-color);
-  font-family: sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: "Noto Serif", serif;
+  line-height: 1.7;
+  font-weight: 450;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,8 @@
   background-color: white;
   /* --accent-color: rgb(255, 51, 0); */
   --accent-color: rgb(255, 90, 61);
+  --accent-color-bg: rgba(255, 90, 61, 0.25);
+  --accent-color-bg-pale: rgba(255, 90, 61, 0.05);
   --black-color: rgb(20,20,20);
   --text-color: rgb(74, 68, 68);
   --transition-time: 200ms;
@@ -24,7 +26,6 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 1.05em;
 }
 
 body {
@@ -38,22 +39,23 @@ body {
 h1 {
   line-height: 1.1;
   text-align: center;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 4vw;
+  font-size: 2.3em;
   line-height: 1.1;
   text-align: center;
 }
 
 h3 {
-  font-size: 2.5em;
+  font-size: 1.8em;
   line-height: 1.1;
   text-align: center;
 }
 
 h4 {
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.1;
   margin: 1em 0;
   text-align: center;
@@ -178,6 +180,7 @@ em {
   top: 0%;
   outline: 2px solid var(--accent-color);
   height: 100%;
+  width: 15em;
   transition: left 0.25s, right 0.25s;
 }
 
@@ -199,8 +202,7 @@ em {
 .hamburger-nav-item {
   color: white;
   height: 2.5em;
-  width: 10em;
-  font-size: 2em;
+  font-size: 1.5em;
   transition-duration: var(--transition-time);
   display: flex;
   flex-direction: column;
@@ -218,8 +220,7 @@ a .hamburger-nav-item {
 
 .hamburger-nav-item-github {
   height: 2.5em;
-  width: 10em;
-  font-size: 2em;
+  font-size: 1.5em;
   transition-duration: var(--transition-time);
   display: flex;
   flex-direction: column;
@@ -232,6 +233,8 @@ a .hamburger-nav-item {
 }
 
 .hamburger-nav-item-github:hover {
+  height: 2.5em;
+  font-size: 1.5em;
   background-color: var(--accent-color);
   .hamburger-github {
     content: url('/src/assets/github-mark/github-mark.svg')
@@ -244,8 +247,7 @@ a .hamburger-nav-item {
 
 .hamburger-nav-item-linkedin {
   height: 2.5em;
-  width: 10em;
-  font-size: 2em;
+  font-size: 1.5em;
   transition-duration: var(--transition-time);
   display: flex;
   flex-direction: column;
@@ -652,7 +654,6 @@ a .hamburger-nav-item {
 
 .course-title {
   text-align: center;
-  font-size: 1.1em;
 }
 
 .course-description {
@@ -929,6 +930,7 @@ a .hamburger-nav-item {
 @media screen and (max-width: 450px) {
   .everything-box {
     margin: 1em 5vw;
+    font-size: 0.8em;
   }
 
   .project-content {
@@ -958,10 +960,6 @@ a .hamburger-nav-item {
   }
   #root {
     margin-top: 0;
-    font-size: 0.8em;
-  }
-  h1 {
-    font-size: 3em;
   }
   .hamburger-navigation {
     left: -30em;
@@ -982,10 +980,8 @@ a .hamburger-nav-item {
   }
   .everything-box {
 	padding-top: 2em;
+	font-size: 0.9em;
   } 
-  #root {
-    font-size: 1.05em;
-  }
   .hamburger-button {
     display: none
   }
@@ -1013,6 +1009,7 @@ a .hamburger-nav-item {
 
   .everything-box {
     margin: 3em 15vw;
+    font-size: 0.8em;
   }
 
   .project-content {
@@ -1042,10 +1039,6 @@ a .hamburger-nav-item {
   }
   #root {
     margin-top: 0;
-    font-size: 0.8em;
-  }
-  h1 {
-    font-size: 3em;
   }
   .hamburger-navigation {
     left: -30em;

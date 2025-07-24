@@ -16,7 +16,7 @@ function BlogSelect({ blogs }) {
 	)
   return (
 	<ul className='blog-select'>
-	  <h2 key={0} className='blog-select-title'>More here</h2>
+	  <h3 key={0} className='blog-select-title'>More here</h3>
 	  {blogList}
 	  <li key={1} className='blog-ind'><div>See all</div></li>
 	  <hr key={2} className='blog-line'></hr>
@@ -36,7 +36,7 @@ function BlogSelectHam({ shouldShow, blogs, exitClick }) {
   return (
 	<ul className='blog-select-ham' style={style_var}>
       <li className='ham-exit' id={4}><img className='cross' onClick={exitClick} src={crossBlack}/></li>
-	  <h2 key={0} className='blog-select-title'>More here</h2>
+	  <h3 key={0} className='blog-select-title'>More here</h3>
 	  {blogList}
 	  <li key={1} onClick={exitClick} className='blog-ind'><div>See all</div></li>
 	  <hr key={2} className='blog-line'></hr>
@@ -78,7 +78,7 @@ function Blog({ index }) {
 		  <img src={profilePic} className='avatar'/>
 		</div>
 		<div className='about-me-text'>
-		  <h2 className='about-me-header'>about me</h2>	
+		  <h3 className='about-me-header'>about me</h3>	
 		  <p>
 			Hello, I'm Henry Jochaniewicz and I'm the one who wrote this.
 			I hope you enjoyed it! You can check out my main page <a>here</a>.

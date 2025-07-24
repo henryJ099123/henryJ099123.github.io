@@ -59,7 +59,7 @@ function GenerateProjectImage({project, shaders, shaderIndex, onClickShader}) {
 function ListOfProjects({projects, shaders, shaderIndices, onClickShader, isItalian}) {
   const listItems = projects.map(project =>
     <li key={project.id} className='project-ind'>
-      <h4 className='project-title'>{project.title}</h4>
+      <h3 className='project-title'>{project.title}</h3>
       <div className='description-project'>
         <p dangerouslySetInnerHTML={{__html: !isItalian ? project.description : project.description_italian}} className='text-box-project'/>
         <GenerateProjectImage project={project} shaders={shaders}
@@ -85,8 +85,8 @@ function ListOfExperiences({experiences}) {
   const listItems = experiences.map(experience => 
     <li key={experience.id} className='experiences-ind' >
       <div className='experiences-titles'>
-        <h4 className='experiences-employer'>{experience.employer}</h4>
-        <h5 className='experiences-title'>{experience.title}</h5>
+        <h3 className='experiences-employer'>{experience.employer}</h3>
+        <h4 className='experiences-title'>{experience.title}</h4>
         <h5 className='experiences-time'>{experience.time}</h5>
       </div>
       <div className='experiences-content'>
@@ -292,7 +292,7 @@ function App() {
         {/* About me section */}
         <div id='about-me' className='header-description'>
           <div className='text-box'>
-            <h4>about me</h4>
+            <h2>about me</h2>
             <div>
               <AboutMe isItalian={isItalian}/>
             </div>
@@ -308,13 +308,13 @@ function App() {
         {/* Relevant coursework */}
         <div id='courses' className='scroll-less'>
           <div className='headers'>
-            <h4>relevant coursework</h4>
+            <h2>relevant coursework</h2>
           </div>
           <div className='courses-as-a-whole'>
             <div className='courses'> 
               <ListOfCourses courses={courses} updater={setCourseIndex} isItalian={isItalian}/>
               <CourseDescription embed={curr_course.embed} image={curr_course.image} link={curr_course.link}>
-                <p className='course-title'><b>{isItalian ? curr_course.name_italian : curr_course.name}</b></p>
+                <h3 className='course-title'>{isItalian ? curr_course.name_italian : curr_course.name}</h3>
                 <p dangerouslySetInnerHTML={{__html: isItalian ? curr_course.description_italian : curr_course.description}}></p>
               </CourseDescription>
             </div>
@@ -331,7 +331,7 @@ function App() {
         {/* experiences */}
         <div id='experience' className='scroll-less'>
           <div className='headers'>
-            <h4>experience</h4>
+            <h2>experience</h2>
           </div>
           <ListOfExperiences experiences={experiences} />
         </div>
@@ -339,7 +339,7 @@ function App() {
         {/* my current projects */}
         <div id='projects' className='scroll-less'>
           <div className='headers'>
-            <h4>current projects</h4>
+            <h2>current projects</h2>
             <p className='contact-me-text'>
               Here are some of my most projects.
               I really like mixing together mathematics and computer science,
@@ -360,7 +360,7 @@ function App() {
           {/* Contact Me section */}
           <div id='contact-me' className='scroll-less'>
             <div className='headers'>
-              <h4>contact me</h4>
+              <h2>contact me</h2>
             </div>
             <div className='contact-me-text'>
               <ContactMeText isItalian={isItalian}/>
