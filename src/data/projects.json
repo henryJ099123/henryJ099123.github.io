@@ -2,7 +2,7 @@
     {
         "id": 0,
         "title": "Interpreters",
-        "description": "I'm currently reading the textbook <a href=\"https://craftinginterpreters.com/\" target=\"_blank\">Crafting Interpreters</a> by Robert Nystrom in order to learn how interpreters work under the hood (via parsing, tokenizing, context-free grammars, etc.). Part of the book is building an interpreter with Java for Nystrom's fake programming language Lox, and in the future, using C for more low-level programming instead of Java's high-level features.",
+        "description": "I'm currently reading the textbook <a href=\"https://craftinginterpreters.com/\" target=\"_blank\">Crafting Interpreters</a> by Robert Nystrom in order to learn how interpreters work under the hood (via parsing, tokenizing, context-free grammars, etc.). I finished the first part of the book, which was building an interpreter with Java for Nystrom's toy dynamic, object-oriented programming language Lox using abstract syntax trees. Beyond his implementation, I added file input and output, lists, for-each loops, string indexing, anonymous functions, and more. I'm currently working through the second half of the book, which involves using C to compile the source code to intermediate bytecode and then interpret that with a virtual machine to improve on performance rather than recursively descend a syntax tree to compute everything. Check out my implementations <a href=\"https://github.com/henryJ099123/interpreters\" target=\"_blank\">here</a>.",
         "is_shader": false
     },
     {

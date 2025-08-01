@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  font-size: 1.05em;
 }
 
 body {
@@ -54,7 +53,7 @@ blockquote:before {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1em;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 3em;
   margin-bottom: 3em;
   margin-left: 2em;
@@ -70,7 +69,6 @@ blockquote:before {
 } 
 
 .title {
-  font-size: 1.2em;
 } 
 
 .date {
@@ -130,7 +128,6 @@ blockquote:before {
   height: 100%;
   width: 10em;
   list-style-type: none;
-  font-size: 1em;
   position: fixed;
   background-color: white;
   transition-duration: var(--transition-time);
@@ -141,12 +138,25 @@ blockquote:before {
 } 
 
 .blog-select {
-  font-size: 1em;
   list-style-type: none;
   /*
   position: fixed;
   */
   width: 10em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1em;
+  padding: 1em 1em;
+  margin: 0;
+} 
+
+.blog-select2 {
+  list-style-type: none;
+  /*
+  position: fixed;
+  */
+  width: 20em;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -189,7 +199,7 @@ blockquote:before {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex: 1 1 200px;
+  flex: 0 1 200px;
   gap: 25px;
 } 
 

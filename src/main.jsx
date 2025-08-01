@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import App from './App.jsx'
 import blogs from './data/blogs.json'
 import Blog from './Blog.jsx'
+import Error from './Error.jsx'
+import BlogStart from './BlogStart.jsx'
 
 function AllRouter({ blogs }) {
   const listBlogs = blogs.map(blog => 
@@ -15,10 +17,10 @@ function AllRouter({ blogs }) {
 	  <Route path = '/'>
 		<Route index element={<App/>}/>
 		<Route path='blog/'>
-		  <Route index element={<h1>Welcome to my blog</h1>}/>
+		  <Route index element={<BlogStart/>}/>
 		  {listBlogs}
 		</Route>
-		<Route path='*' element={<h1>no good!</h1>}/>
+		<Route path='*' element={<Error/>}/>
 	  </Route>
 	</Routes>
   </BrowserRouter>)

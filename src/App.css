@@ -9,6 +9,7 @@
   font-family: "Noto Serif", serif;
   line-height: 1.7;
   font-weight: 450;
+  font-size: 11pt;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -73,6 +74,10 @@ h6 {
 	text-align: center;
 }
 
+p:hover code {
+  color: white
+} 
+
 a {
   transition-duration: var(--transition-time);
   color: var(--accent-color);
@@ -84,6 +89,11 @@ a {
   cursor: pointer
 }
 
+ul {
+  ul {
+	padding-left: 1.1em	
+  } 
+}
 em {
   color: var(--accent-color);
   transition-duration: var(--transition-time);
@@ -127,6 +137,14 @@ em {
   height: 2em;
   padding: 1em
 }
+
+.box {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 0em 3em;
+} 
 
 .hamburger-button {
   display: flex;
@@ -180,7 +198,7 @@ em {
   top: 0%;
   outline: 2px solid var(--accent-color);
   height: 100%;
-  width: 15em;
+  width: 12em;
   transition: left 0.25s, right 0.25s;
 }
 
@@ -868,14 +886,12 @@ a .hamburger-nav-item {
 }
 
 .text-box-project {
-  text-align: left;
+  flex: 1 1 300px;
   height: auto;
-  max-width: 300px;
   padding: 0 1em;
 }
 
 .contact-me-text {
-  text-align: left;
   padding: 1em;
   margin: 0;
   max-width: 600px;
@@ -930,7 +946,7 @@ a .hamburger-nav-item {
 @media screen and (max-width: 450px) {
   .everything-box {
     margin: 1em 5vw;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   .project-content {
@@ -980,7 +996,6 @@ a .hamburger-nav-item {
   }
   .everything-box {
 	padding-top: 2em;
-	font-size: 0.9em;
   } 
   .hamburger-button {
     display: none
@@ -1009,7 +1024,6 @@ a .hamburger-nav-item {
 
   .everything-box {
     margin: 3em 15vw;
-    font-size: 0.8em;
   }
 
   .project-content {

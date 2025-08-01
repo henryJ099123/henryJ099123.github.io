@@ -4,7 +4,7 @@
         "employer": "IRES 2025 Research Program",
         "title": "Undergraduate Researcher",
         "time": "May 2025 - August 2025",
-        "description": "This is a research internship under Dr. Michael Niemier that took place in Lyon, France, partnered with Ecolè Centrale de Lyon. With four other undergraduate students, I benchmarked various figures of merit for different AES hardware accelerators and developed Python files and Google Colab sessions to automatically generate graphs of desired data points. Beyond the research, being in France for two months was an incredible opportunity to engage with international students and a brand-new culture (and learn a bit of French)."
+        "description": "This is a research internship under Dr. Michael Niemier that took place in Lyon, France at Ècole Centrale de Lyon. With four other undergraduate students, I benchmarked figures of merit for different AES hardware accelerators and developed Python files and Google Colab sessions to automatically generate graphs of desired data points. These graphs and our data was used in sponsor presentations! We additionally did some research on applying emerging memory technologies, specifically ferroelectrics, to an AES accelerator and presented a modified bitcell using 1FeFET-1C cells for the byte substitution step. Beyond research, being in France for two months was an incredible opportunity to engage with international students and a brand-new culture (and learn a bit of French)."
     },
     {
         "id": 1,
