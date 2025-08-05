@@ -74,10 +74,6 @@ h6 {
 	text-align: center;
 }
 
-p:hover code {
-  color: white
-} 
-
 a {
   transition-duration: var(--transition-time);
   color: var(--accent-color);
@@ -839,7 +835,10 @@ a .hamburger-nav-item {
 .project-ind:hover {
   background-color: var(--accent-color);
   color: black;
-  outline-color: var(--black-color)
+  outline-color: var(--black-color);
+  code {
+    color: white
+  } 
 }
 
 .project-ind:hover .shaderCanvas {
@@ -945,7 +944,9 @@ a .hamburger-nav-item {
 
 @media screen and (max-width: 450px) {
   .everything-box {
-    margin: 1em 5vw;
+    margin: 5vw;
+    margin-top: 3em;
+    margin-bottom: 1em;
     font-size: 0.9em;
   }
 
@@ -995,7 +996,7 @@ a .hamburger-nav-item {
     display: flex
   }
   .everything-box {
-	padding-top: 2em;
+	margin-top: 6em;
   } 
   .hamburger-button {
     display: none
