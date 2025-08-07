@@ -1,13 +1,13 @@
 [
     {
         "id": 0,
-        "title": "Interpreters",
-        "description": "I'm currently reading the textbook <a href=\"https://craftinginterpreters.com/\" target=\"_blank\">Crafting Interpreters</a> by Robert Nystrom in order to learn how interpreters work under the hood (via parsing, tokenizing, context-free grammars, etc.). I finished the first part of the book, which was building an interpreter with Java for Nystrom's toy dynamic, object-oriented programming language Lox using abstract syntax trees. Beyond his implementation, I added file input and output, lists, for-each loops, string indexing, anonymous functions, and more. I'm currently working through the second half of the book, which involves using C to compile the source code to intermediate bytecode and then interpret that with a virtual machine to improve on performance rather than recursively descend a syntax tree to compute everything. Check out my implementations <a href=\"https://github.com/henryJ099123/interpreters\" target=\"_blank\">here</a>.",
+        "title": "interpreters",
+        "description": "I'm currently reading the textbook <a href=\"https://craftinginterpreters.com/\" target=\"_blank\">Crafting Interpreters</a> by Robert Nystrom in order to learn how interpreters work under the hood (via parsing, tokenizing, context-free grammars, etc.). I finished the first part of the book, which was building an interpreter with Java for Nystrom's toy dynamic, object-oriented programming language Lox using abstract syntax trees. Beyond his implementation, I added file input and output, lists, for-each loops, string indexing, anonymous functions, and more.<br/><br/>I'm currently working through the second half of the book, which involves using C to compile the source code to intermediate bytecode and then interpret that with a virtual machine to improve on performance rather than recursively descend a syntax tree to compute everything. Check out my implementations <a href=\"https://github.com/henryJ099123/interpreters\" target=\"_blank\">here</a>.",
         "is_shader": false
     },
     {
         "id": 1,
-        "title": "Shaders",
+        "title": "shaders",
         "description": "In Summer of 2024, I learned from <a href=\"https://thebookofshaders.com/\" target=\"_blank\">thebookofshaders.com</a> by Patricio Gonzales Vivo and Jen Lowe how to design and code fragment shaders using OpenGL, using techniques like shaping functions, deterministic randomness, cellular noise, and fractal Brownian motion. I programmed Voronoi diagrams, the Mandelbrot set, and various cool-looking motions. Click on the shaders to cycle through some of the <a href=\"https://github.com/henryJ099123/shader_practice\" target=\"_blank\">ones I made</a> (and try moving your mouse over some!).",
         "is_shader": true,
         "content": [
@@ -24,7 +24,7 @@
     },
     {
         "id": 2,
-        "title": "Infinite Sum Visualizer",
+        "title": "infinite sum visualizer",
         "description": "When I was a kid, I developed a Processing applet with Java to display some infinite sum formula with Complex inputs on the Complex plane. I decided to recently rebuild it using Python for a cleaner look, smoother interactivity, and practice with magic method overloading. The graph is interactable with the radius of convergence plotted as well. Check it out as a <a href=\"https://colab.research.google.com/drive/1W_epJyG46opPre7LBc9gb4xm6BCMwvWP?usp=sharing\" target=\"_blank\">Google Colab</a> by clicking the picture, or see the <a href=\"https://github.com/henryJ099123/InfSumsVisualized\">repository</a> itself.",
         "is_shader": false,
         "content": "/graph.svg",
@@ -32,8 +32,8 @@
     },
     {
         "id": 3,
-        "title": "This website!",
-        "description": "I hope you've enjoyed looking at it! I spent a lot of time on it. It's built with React and NodeJS, and it's my first exposure to HTML and CSS. While I have technically used Javascript before, the last time I tried was when <code>var</code> was used to declare variables...so basically brand new to JS too.",
-        "is_false": false
+        "title": "this website",
+        "description": "I hope you've enjoyed looking at it (I spent a lot of time in these style sheets). It's built with React, and it's my first exposure to HTML and CSS. While I have technically used Javascript before, the last time I tried was when <code>var</code> was used to declare variables...so basically brand new to JS too. While I don't plan on working in web development anytime soon, experiencing the process first-hand taught me about the importance of communication, as <i>anyone</i> will be checking out this site, not just developers, and visual communication of my contributions is key.",
+        "is_shader": false
     }
 ]

@@ -15,7 +15,7 @@
   flex-direction: column;
   text-align: left;
   background-color: white;
-  /* --accent-color: rgb(255, 51, 0); */
+  /*  --accent-color: rgb(060, 200, 170); */
   --accent-color: rgb(255, 90, 61);
   --accent-color-bg: rgba(255, 90, 61, 0.25);
   --accent-color-bg-pale: rgba(255, 90, 61, 0.05);
@@ -136,7 +136,7 @@ em {
 
 .box {
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 0em 3em;
@@ -431,9 +431,9 @@ a .hamburger-nav-item {
 }
 
 .text-box {
-  flex: 1 1 250px;
+  flex: 1 1 300px;
+  max-width: 600px;
   /* height: 500px; */
-  max-width: 400px;
   /* min-width: 200px; */
   padding: 1em 1em;
   border-radius: 25px;
@@ -520,10 +520,10 @@ a .hamburger-nav-item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  gap: 25px;
+  justify-content: space-evenly;
+  gap: 1.5em;
+  align-self: stretch;
   /* width: 100%; */
-  align-content: center;
   align-items: center;
   /* margin-top: 100px; */
   /* padding: 100em; */
@@ -548,7 +548,7 @@ a .hamburger-nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 1.5em;
 }
 
 .other-courses {
@@ -717,7 +717,7 @@ a .hamburger-nav-item {
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
-  gap: 20px;
+  gap: 1.5em;
   flex-direction: column;
   padding: 0;
   margin: 0;
@@ -729,14 +729,14 @@ a .hamburger-nav-item {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .experiences-titles {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .experiences-employer {
@@ -761,7 +761,7 @@ a .hamburger-nav-item {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 1.5em;
 }
 
 .experiences-description {
@@ -807,21 +807,27 @@ a .hamburger-nav-item {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  /*
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  */
+  /*
   display: grid;
-  gap: 25px;
-  /* outline: 1px solid yellow; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: flex-start;
+  */
+  /*
+  grid-template-areas:
+    "main main"
+    "main main";
+  */
+  gap: 1.5em;
 }
 
 .project-ind {
   border-radius: 25px;
-  /* flex: 1 1 400px; */
+  flex: 1 1 400px; 
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -830,8 +836,9 @@ a .hamburger-nav-item {
   align-content: stretch;
   transition-duration: var(--transition-time);
   outline: 2px solid var(--accent-color);
+  width: fit-content;
   /* width: max-content; */
-  /* gap: 25px; */
+  /* gap: 1.5em; */
   /* margin: 0 5%; */
 }
 
@@ -941,7 +948,7 @@ a .hamburger-nav-item {
   flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 1em;
+  gap: 1.5em;
   margin: 3em 15vw;
 }
 
@@ -952,6 +959,13 @@ a .hamburger-nav-item {
     margin-bottom: 1em;
     font-size: 0.9em;
   }
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
 
   .project-content {
     width: 40vw;
@@ -1030,6 +1044,13 @@ a .hamburger-nav-item {
     margin: 3em 15vw;
   }
 
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  } 
   .project-content {
     width: 40vw;
   }

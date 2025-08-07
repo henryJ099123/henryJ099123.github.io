@@ -192,13 +192,19 @@ function AboutMe({isItalian}) {
   }
   return (
     <p>
-    I am a current sophomore at the University 
+    I am a current junior at the University 
     of Notre Dame studying computer science
     in the College of Engineering with a minor in Theology.
     My favorite thing to do is solve problems,
-    especially the hard ones.
+    the harder the better. I get excited at tough problem sets
+    (which may or may not be sane).
     I take math classes as my electives for fun and enjoy 
-    to visualize that math in code.
+    visualizing that math in code.
+    That doesn't mean I don't like computer science itself:
+    I love learning about the lower-level implementations of abstract
+    concepts, like compilers and the shell.
+    And I love to use Vim. Hopefully that scores some points somewhere.
+    <br/><br/>
     Outside of classes, I'm a big fan of films (check out my 
     <a href="https://letterboxd.com/henryj099/" target="_blank"> Letterboxd</a>),
     especially Studio Ghibli
@@ -207,7 +213,7 @@ function AboutMe({isItalian}) {
     My favorite video games are story-based or centered around puzzles and knowledge
     (e.g. <i>Outer Wilds</i>, <i> Bioshock</i>, <i>Hollow Knight</i>).
     Beyond that, I like to teach myself piano, fold origami, or practice
-    my Italian.
+    my Italian (and now, some French, too).
     </p>
   )
 }
@@ -322,10 +328,12 @@ function App() {
               </CourseDescription>
             </div>
             <div className='contact-me-text'>
-              Here are some other courses I have taken:
+              And that's not all! I've also taken:&#32;
+              <em>
               Engineering Design, Logic Design and Sequential Circuits, Calculus III,
               Intro to Linear Algebra and Differential Equations,
-              Computer Architecture, Intro to Probability, Real Analysis, Eschatology
+              Computer Architecture, Intro to Probability, Real Analysis, and Eschatology.
+              </em>
             </div>
           </div>
 
@@ -344,13 +352,14 @@ function App() {
           <div className='headers'>
             <h2>current projects</h2>
             <p className='contact-me-text'>
-              Here are some of my most projects.
+              Here are some of my personal projects.
               I really like mixing together mathematics and computer science,
-              so some of my projects have been related to <em>computer graphics</em>&#32;
-              or to <em>mathematical visualizations</em>.
+              so some of my projects have been related to computer graphics&#32;
+              or to mathematical visualizations.
               I also appreciate learning about low-level, behind-the-scenes
               topics and learning how to construct the abstractions
-              that we take for granted.
+              that we take for granted, so some projects are related to that, too.
+              Regardless, I'm never afraid to take the time to learn something new.
             </p>
           </div>
         </div>
