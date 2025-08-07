@@ -18,9 +18,9 @@ function BlogSelect({ blogs }) {
 	<ul className='blog-select'>
 	  <h3 key={0} className='blog-select-title'>More here</h3>
 	  {blogList}
-	  <li key={1} className='blog-ind'><div>See all</div></li>
+	  <Link to="../" key={1} className='blog-ind'>see all</Link>
 	  <hr key={2} className='blog-line'></hr>
-	  <div key={3} className='main-page'><p>Main page</p></div>
+	  <Link to="/" key={3} className='blog-ind'>main page</Link>
 	 </ul>
 	 )
 } 

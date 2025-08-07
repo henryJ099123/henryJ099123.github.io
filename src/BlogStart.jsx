@@ -10,7 +10,7 @@ import './blog.css'
 
 function BlogSelect({ blogs }) {
   const blogList = blogs.map(blog =>  
-	<Link to={'../' + blog.urlname} key={blog.id + 1} className='blog-ind'>
+	<Link to={blog.urlname} key={blog.id + 2} className='blog-ind'>
 	  <div>{blog.name}</div>
 	  <i>{blog.date}</i>
 	</Link>
@@ -18,6 +18,8 @@ function BlogSelect({ blogs }) {
   return (
 	<ul className='blog-select2'>
 	  {blogList}
+	  <hr key={1} className='blog-line'></hr>
+	  <Link to="/" key={0} className='blog-ind'>main page</Link>
 	 </ul>
 	 )
 } 
