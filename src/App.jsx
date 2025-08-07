@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import './App.css'
 import linkedinLogo from './assets/in-logo/InBug-White.png'
 import githubLogoWhite from './assets/github-mark/github-mark-white.svg'
@@ -226,6 +227,8 @@ function ContactMeText({isItalian}) {
   to contact me whether for any reason, whether about something professional, academic,
   or if you really need to talk to someone about how amazing Kurt Vonnegut's
   writing is.
+  And if you're interested in seeing my <i>own</i> writing,
+  &#32;<Link to="blog">check it out here</Link>.
   </p>)
 }
 

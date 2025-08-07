@@ -807,11 +807,14 @@ a .hamburger-nav-item {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  /*
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  */
+  display: grid;
   gap: 25px;
   /* outline: 1px solid yellow; */
 }
