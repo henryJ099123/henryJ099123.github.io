@@ -70,7 +70,9 @@ function Blog({ index }) {
 		  <div className='date'><i>{this_blog.date}</i></div>
 		</div>
 		<div className='blog'>
-		  <Markdown>{this_blog.data}</Markdown>
+		  <Markdown
+            children={this_blog.data}
+          />
 		</div>
 	  </div>
 	  <div className='about-me'>

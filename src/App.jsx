@@ -99,13 +99,13 @@ function ListOfExperiences({experiences}) {
   return <ul className='experiences'>{listItems}</ul>
 }
 
-function ListOfCourses({courses, updater, isItalian}) {
+function ListOfCourses({courses, updater, isItalian, children}) {
   const listItems = courses.map(course =>
     <li key={course.id} className='course-ind' onClick={() => updater(course.id)}>
       <p>{isItalian ? course.name_italian : course.name}</p>
     </li>
   )
-  return <ul className='course-names'>{listItems}</ul>
+  return <ul className='course-names'>{listItems}{children}</ul>
 }
 
 function CourseDescription({image, embed, link, children}) {
@@ -192,9 +192,9 @@ function AboutMe({isItalian}) {
   }
   return (
     <p>
-    I am a current junior at the University 
-    of Notre Dame studying computer science
-    in the College of Engineering with a minor in Theology.
+    I am a student
+    studying computer science
+    with a minor in Theology.
     My favorite thing to do is solve problems,
     the harder the better. I get excited at tough problem sets
     (which may or may not be sane).
@@ -299,18 +299,25 @@ function App() {
       <div className='everything-box'>
         
         {/* About me section */}
-        <div id='about-me' className='header-description'>
-          <div className='text-box'>
-            <h2>about me</h2>
-            <div>
-              <AboutMe isItalian={isItalian}/>
-            </div>
-          </div>
-          <div className='header-image'>
+        <div id='about-me' className='header'>
+          <div className='header-copy'>
             <h1>Henry Jochaniewicz</h1>
-            <div className='card-big'>
-              <img src={profilePic} className='avatar-big'/>
-            </div>
+            <h5 className='header-description'>
+            I'm a junior at the University of Notre Dame
+            and looking for a software engineering internship.
+            Scroll down to see my projects and coding capabilities.
+            That (as you can see) does not include front-end.
+            </h5>
+          </div>
+          <div className='card-big'>
+            <img src={profilePic} className='avatar-big'/>
+          </div>
+        </div>
+
+        <div className='text-box'>
+          <h2>a bit about me</h2>
+          <div>
+            <AboutMe isItalian={isItalian}/>
           </div>
         </div>
 
@@ -321,19 +328,21 @@ function App() {
           </div>
           <div className='courses-as-a-whole'>
             <div className='courses'> 
-              <ListOfCourses courses={courses} updater={setCourseIndex} isItalian={isItalian}/>
+              <ListOfCourses courses={courses} updater={setCourseIndex} isItalian={isItalian}>
+                <hr className='credits-line'></hr>
+                <div className='course-ind'>
+                  <p>
+                  And that's not all! I've also taken:
+                  Engineering Design, Logic Design and Sequential Circuits, Calculus III,
+                  Intro to Linear Algebra and Differential Equations,
+                  Computer Architecture, Intro to Probability, Real Analysis, and Eschatology.
+                  </p>
+                </div>
+              </ListOfCourses>
               <CourseDescription embed={curr_course.embed} image={curr_course.image} link={curr_course.link}>
                 <h3 className='course-title'>{isItalian ? curr_course.name_italian : curr_course.name}</h3>
                 <p dangerouslySetInnerHTML={{__html: isItalian ? curr_course.description_italian : curr_course.description}}></p>
               </CourseDescription>
-            </div>
-            <div className='contact-me-text'>
-              And that's not all! I've also taken:&#32;
-              <em>
-              Engineering Design, Logic Design and Sequential Circuits, Calculus III,
-              Intro to Linear Algebra and Differential Equations,
-              Computer Architecture, Intro to Probability, Real Analysis, and Eschatology.
-              </em>
             </div>
           </div>
 

@@ -21,8 +21,7 @@ pre {
   border-radius: 20px;
   outline: 2px solid var(--accent-color);
   background-color: var(--black-color);
-  padding: 1em 0em;
-  padding-left: 1em;
+  padding: 1em 1em;
   code {
 	color: white;
 	font-size: 0.8em;
@@ -37,6 +36,7 @@ blockquote {
   p {
 	margin: 0
   } 
+  font-size: 10pt;
   border-left: 10px solid var(--accent-color);
   background-image: linear-gradient(to right, var(--accent-color-bg), var(--accent-color-bg-pale));
   padding: 1em 1em;

@@ -29,6 +29,13 @@ public static void main(String args[]) {
     System.out.println(z);
 } 
 ```
+Another code snippet:
+```c
+int main() {
+    printf("%d\n", 5);
+    return 0;
+} 
+```
 
 A quote:
 > I am a quote.

@@ -11,8 +11,8 @@
         "employer": "Domer Rover Engineering Club",
         "title": "Radio and Communications Lead and Club Member",
         "time": "September 2023 - May 2025",
-        "description":"Domer Rover is an engineering build club where our goal is to build a rover for the University Rover Competition. I served as the Radio and Communications Lead this past year, so I taught myself all about radios, earned a Technician-level Ham radio license, and developed a communication network between the rover and our base station over two frequency bands. The 900MHz band was essentially serial, so I designed a single-stream message-based weighted-round-robin communication system to accomodate this and handle any potential dips in communication. Testing showed this system works at over a kilometer distance! Check out our SAR to the right.",
-        "embed": "https://www.youtube.com/embed/hucJjNddpHI?si=pdjk5AEvFAzoesC2"
+        "description":"Domer Rover is an engineering build club where our goal is to build a rover for the University Rover Competition. I served as the Radio and Communications Lead this past year, so I taught myself all about radios, earned a Technician-level Ham radio license, and developed a communication network between the rover and our base station over two frequency bands. The 900MHz band was essentially serial, so I designed a single-stream message-based weighted-round-robin communication system to accomodate this and handle any potential dips in communication. Testing showed this system works at over a kilometer distance! Check out our SAR video embedded here to hear me talk about it.",
+        "embed": "https://www.youtube.com/embed/hucJjNddpHI?si=pdjk5AEvFAzoesC2&amp;start=220"
     },
     {
         "id": 2,

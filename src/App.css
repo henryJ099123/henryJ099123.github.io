@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.3em;
+  font-size: 2em;
   line-height: 1.1;
   text-align: center;
 }
@@ -63,8 +63,9 @@ h4 {
 }
 
 h5 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   line-height: 1.1;
+  margin: 1em 0;
   text-align: center;
 }
 
@@ -516,7 +517,7 @@ a .hamburger-nav-item {
   z-index: -1;
 }
 
-.header-description {
+.header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
@@ -534,15 +535,20 @@ a .hamburger-nav-item {
   /* background-color: red; */
 }
 
-.header-image {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1em;
-  /* outline: 2px solid pink; */
-}
+.header-copy {
+  flex: 1 0 300px;
+  h1 {
+    text-align: left;
+  } 
+  h5 {
+    text-align: left;
+  } 
+} 
+
+.header-description {
+  text-align: left;
+  font-weight: normal;
+} 
 
 .courses-as-a-whole {
   display: flex;
@@ -569,19 +575,12 @@ a .hamburger-nav-item {
 
 .courses {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 1em;
   /* outline: 1px solid rgb(71, 0, 251); */
-}
-
-.courses-header {
-  display:flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-
 }
 
 .course-names {
@@ -592,11 +591,10 @@ a .hamburger-nav-item {
   flex-direction: column;
   /* width: min-content; */
   justify-content: center;
-  align-items: stretch;
   padding: 0;
   align-self: flex-start;
-  gap: 10px;
-  flex-grow: 1;
+  gap: 0.5em;
+  width: 40%;
   /* border-radius: 25px; */
   /* outline: 1px solid var(--accent-color); */
 }
@@ -612,7 +610,7 @@ a .hamburger-nav-item {
   cursor: pointer;
   padding: 0 var(--padding-amount);
   transition-duration: var(--transition-time);
-  border-radius: 10px;
+  border-radius: 25px;
   outline: 2px solid var(--accent-color)
 }
 
@@ -643,7 +641,7 @@ a .hamburger-nav-item {
   background-color: var(--black-color);
   color: white;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 25px;
   font-style: normal;
   outline: 2px solid var(--accent-color);
   transition-duration: var(--transition-time);
@@ -678,13 +676,11 @@ a .hamburger-nav-item {
   align-items: center;
   align-content: center;
   justify-content: center;
-  gap: 20px;
   flex: 2 1 300px;
   /* height: auto; */
   /* flex-grow: 2; */
   /* max-width: 500px; */
   /* min-width: 100px; */
-  padding: 10px;
   border-radius: 25px;
   outline: 2px solid var(--accent-color);
   transition-duration: var(--transition-time)
@@ -936,7 +932,7 @@ a .hamburger-nav-item {
 }
 
 .avatar-big {
-  border-radius: 50%;
+  border-radius: 25%;
   object-fit:cover;
   object-position: 0 60%;
   outline: 2px solid var(--accent-color);
