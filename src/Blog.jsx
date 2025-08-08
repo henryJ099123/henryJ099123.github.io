@@ -6,6 +6,8 @@ import profilePic from './assets/hiking_me.jpg'
 import crossBlack from './assets/cross_black.svg'
 import HamburgerButton from './HamburgerButton.jsx'
 import './blog.css'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { gruvboxDark as dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 function BlogSelect({ blogs }) {
   const blogList = blogs.map(blog => blog.id > 5 ? <></> : 
@@ -71,8 +73,23 @@ function Blog({ index }) {
 		</div>
 		<div className='blog'>
 		  <Markdown
-            children={this_blog.data}
-          />
+        children={this_blog.data}
+        components={{
+          pre({children}) {
+            return <>{children}</>
+          }, 
+          code({children, className, node, ...rest}) {
+            const match = /language-(\w+)/.exec(className || '')
+            return match ? (
+              <SyntaxHighlighter 
+                {...rest} 
+                children={String(children).replace(/\n$/, '')} 
+                language={match[1]} 
+                style={dark}/>) : (
+                <code {...rest} className={className}>{children}</code>)
+          } 
+        }} 
+      />
 		</div>
 	  </div>
 	  <div className='about-me'>

@@ -2,22 +2,31 @@ Tester file
 Today
 # This is a test file
 
-I'm a test file!
+# h1
 
-## Here's more!
+## h2
 
-*blah blah blah*
+### h3
 
-a [link](www.google.com)
+#### h4
 
-### third level
+##### h5
+
+###### h6
+
+*italics*
+
+[a link](www.google.com)
 
 **Bold text**
+
+***Bold and italic***
 
 Here is `some code` inline; for example, use the `biggest.main` method.
 
 Extended code:
-```
+
+```text
 int x = 5;
 for(int i = 0; i < 5; i++)
     print(x);
@@ -29,7 +38,9 @@ public static void main(String args[]) {
     System.out.println(z);
 } 
 ```
+
 Another code snippet:
+
 ```c
 int main() {
     printf("%d\n", 5);
@@ -38,12 +49,31 @@ int main() {
 ```
 
 A quote:
+
 > I am a quote.
+> Here is *italics*.
+> Here is **bold**.
+> Here is ***both***.
+> Here is [a link](www.google.com).
+> Here is `code`.
 
 A block quote:
+
 > text
+>
 > more text
+>
 > wow. I really am a block quote
+
+Quote nesting:
+
+> level 1
+>> level 2
+>>> level 3
+
+a horizontal line:
+
+---
 
 some lists:
 

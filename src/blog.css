@@ -18,14 +18,9 @@ code {
 
 pre {
   overflow-x: scroll;
-  border-radius: 20px;
+  border-radius: 25px;
   outline: 2px solid var(--accent-color);
-  background-color: var(--black-color);
-  padding: 1em 1em;
-  code {
-	color: white;
-	font-size: 0.8em;
-  } 
+  font-size: 10pt;
 } 
 
 a:hover {
@@ -36,15 +31,33 @@ blockquote {
   p {
 	margin: 0
   } 
+  blockquote {
+    margin-left: 0.25em;
+  } 
   font-size: 10pt;
-  border-left: 10px solid var(--accent-color);
+  border-left: 5px solid var(--accent-color);
+  background-color: var(--accent-color-bg-pale);
+  /*
+  border-right: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  */
+  border-radius: 0 25px 25px 0;
+  /*
   background-image: linear-gradient(to right, var(--accent-color-bg), var(--accent-color-bg-pale));
+  */
   padding: 1em 1em;
-  margin: 0 1em;
+  margin: 0;
+  margin-left: 1em;
+  transition-duration: var(--transition-time);
 } 
 
 blockquote:before {
   margin-right: 0.25em;
+} 
+
+blockquote:hover {
+  background-color: var(--accent-color-bg);
 } 
 
 .main-box {
