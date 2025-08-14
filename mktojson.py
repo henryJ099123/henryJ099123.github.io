@@ -4,6 +4,12 @@ import os
 from pathlib import Path
 import json
 
+# For notes in this directory (for posts),
+# the first line ought to be the name of the post,
+# the second line the author,
+# the third the date of posting,
+# and then the file as normal
+
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         raise ValueError("usage: ./mktojson.py [-f|-r] [name_of_file/dir] [file_to_write_to]")
@@ -16,6 +22,7 @@ if __name__ == "__main__":
         entry = {"urlname": name}
         with open(sys.argv[2]) as f:
             entry["name"] = f.readline().strip()
+            entry["author"] = f.readline().strip()
             entry["date"] = f.readline().strip()
             entry["data"] = f.read()
     
@@ -31,6 +38,7 @@ if __name__ == "__main__":
                 entry = {"id": i}
                 entry["urlname"] = file.split('.')[0]
                 entry["name"] = f.readline().strip()
+                entry["author"] = f.readline().strip()
                 entry["date"] = f.readline().strip()
                 entry["data"] = f.read()
                 lst.append(entry)

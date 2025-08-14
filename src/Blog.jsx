@@ -68,7 +68,7 @@ function Blog({ index }) {
 	  <BlogSelect blogs={blogs}/>
 	  <div className='blog-container'>
 		<div className='title-and-date'>
-		  <div className='title'>Henry Jochaniewicz</div>
+		  <div className='title'>{this_blog.author}</div>
 		  <div className='date'><i>{this_blog.date}</i></div>
 		</div>
 		<div className='blog'>
