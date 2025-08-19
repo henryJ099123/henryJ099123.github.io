@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useLayoutEffect } from 'react'
 import blogs from './data/blogs.json'
 import { Link, Outlet } from 'react-router-dom'
 import Markdown from 'react-markdown'
@@ -40,9 +40,9 @@ function BlogSelectHam({ shouldShow, blogs, exitClick }) {
       <li className='ham-exit' id={4}><img className='cross' onClick={exitClick} src={crossBlack}/></li>
 	  <h3 key={0} className='blog-select-title'>More here</h3>
 	  {blogList}
-	  <li key={1} onClick={exitClick} className='blog-ind'><div>See all</div></li>
+	  <Link to="../" key={1} className='blog-ind'>see all</Link>
 	  <hr key={2} className='blog-line'></hr>
-	  <div key={3} onClick={exitClick} className='main-page'><p>Main page</p></div>
+	  <Link to="/" key={3} className='blog-ind'>main page</Link>
 	 </ul>
 	 )
 } 
@@ -60,6 +60,8 @@ function Blog({ index }) {
       setHamClick(false)
     }
   })
+
+  useLayoutEffect(() => { window.scrollTo(0,0) })
 
   return (<>
 	<HamburgerButton className="hamburger-button2" onClick={changeHamClick}/>

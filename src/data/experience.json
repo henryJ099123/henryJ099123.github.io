@@ -4,14 +4,14 @@
         "employer": "IRES 2025 Research Program in Lyon, France",
         "title": "Undergraduate Researcher",
         "time": "May 2025 - August 2025",
-        "description": "This is a research internship under Dr. Michael Niemier that took place in Lyon, France at Ècole Centrale de Lyon. With four other undergraduate students, I benchmarked figures of merit for different AES hardware accelerators and developed Python files and Google Colab sessions to automatically generate graphs of desired data points. These graphs and our data was used in sponsor presentations! We additionally did some research on applying emerging memory technologies, specifically ferroelectrics, to an AES accelerator and presented a modified bitcell using 1FeFET-1C cells for the byte substitution step. Beyond research, being in France for two months was an incredible opportunity to engage with international students and a brand-new culture (and learn a bit of French)."
+        "description": "This is a research internship under Dr. Michael Niemier that took place in Lyon, France at École Centrale de Lyon. With four other undergraduate students, I benchmarked figures of merit for different AES hardware accelerators from more than 11 academic research papers to compare to an under-development AES chip. To demonstrate trends in that data, I wrote up Python files and a Google Colab session to automatically generate graphs. These graphs and data were shown off in sponsor presentations! We additionally did some research on applying emerging memory technologies, specifically ferroelectrics, to an AES accelerator and presented a modified bitcell using 1FeFET-1C cells for the SubBytes step of encryption. Lastly, we formally presented our findings and contributions to over 30 PhD students and our advisor.<br></br>Beyond the research, being in France for two months was an incredible opportunity to engage with international students and a brand-new culture (and learn a bit of French)."
     },
     {
         "id": 1,
         "employer": "Domer Rover Engineering Club",
         "title": "Radio and Communications Lead and Club Member",
         "time": "September 2023 - May 2025",
-        "description":"Domer Rover is an engineering build club where our goal is to build a rover for the University Rover Competition. I served as the Radio and Communications Lead this past year, so I taught myself all about radios, earned a Technician-level Ham radio license, and developed a communication network between the rover and our base station over two frequency bands. The 900MHz band was essentially serial, so I designed a single-stream message-based weighted-round-robin communication system to accomodate this and handle any potential dips in communication. Testing showed this system works at over a kilometer distance! Check out our SAR video embedded here to hear me talk about it.",
+        "description":"Domer Rover is an engineering build club where our goal is to build a rover for the University Rover Competition. I served as the Radio and Communications Lead this past year, so I taught myself all about radios, earned a Technician-level Ham radio license (callsign KE9AZR), and developed a communication network between the rover and our base station over two frequency bands. The 900MHz band was essentially serial, so I designed a single-stream message-based weighted-round-robin communication system to accomodate this and handle potential dips in communication. The rover sends photos, driving controls, status signals, and video at a distance, and in testing this system works at over a kilometer distance! Check out our SAR video embedded here to hear me talk about it.",
         "embed": "https://www.youtube.com/embed/hucJjNddpHI?si=pdjk5AEvFAzoesC2&amp;start=220"
     },
     {
@@ -19,7 +19,7 @@
         "employer": "University of Notre Dame",
         "title": "Undergraduate Teaching Assistant",
         "time": "August 2024 - Present",
-        "description": "In Fall of 2024, I was a teaching assistant for Discrete Mathematics for a class of about 50 students. I held office hours once a week, coordinated with four other TAs and the instructor, and taught myself content new to this semester in order to help students. In Spring 2025, I was a grader for Magic of Numbers, a mathematics seminar for about fifteen first-year students. For Fall 2025, I will be a Fundamentals of Computing TA for second-years."
+        "description": "In Fall of 2024, I was a teaching assistant for Discrete Mathematics for a class of about 50 students. I held office hours once a week, coordinated with four other TAs and the instructor, and even taught myself content new to this isntructor in order to help students. In Spring 2025, I was a grader for Magic of Numbers, a mathematics seminar for about fifteen first-year students, and I provided tailored feedback on each homework assignment. For Fall 2025, I will be a Fundamentals of Computing TA for second-years."
     },
     {
         "id": 3,

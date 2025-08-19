@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useLayoutEffect } from 'react'
 import blogs from './data/blogs.json'
 import { Link, Outlet } from 'react-router-dom'
 import Markdown from 'react-markdown'
@@ -25,13 +25,16 @@ function BlogSelect({ blogs }) {
 } 
 
 function BlogStart() {
+
+  useLayoutEffect(() => { window.scrollTo(0, 0) })
+
   return(
     <div className='main-box'>
       <div className='box'>
         <h1>blogs</h1>
         <BlogSelect blogs={blogs}/>
       </div>
-      <div className='about-me'>
+      <div className='about-me2'>
 		<div className='card'>
 		  <img src={profilePic} className='avatar'/>
 		</div>
@@ -39,7 +42,7 @@ function BlogStart() {
           <h3 className='about-me-header'>about me</h3>	
           <p>
             Hello, I'm Henry Jochaniewicz and this is my blog.
-            I hope you enjoyed checking it out! You can check out my main page <a>here</a>.
+            I hope you enjoyed checking it out! You can check out my main page <Link to="/">here</Link>.
           </p>
         </div>
         <div className='credits'>

@@ -843,7 +843,7 @@ a .hamburger-nav-item {
   background-color: var(--accent-color);
   color: black;
   outline-color: var(--black-color);
-  code {
+  code, a, em {
     color: white
   } 
 }

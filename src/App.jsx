@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useLayoutEffect, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
 import linkedinLogo from './assets/in-logo/InBug-White.png'
@@ -91,7 +91,7 @@ function ListOfExperiences({experiences}) {
         <h5 className='experiences-time'>{experience.time}</h5>
       </div>
       <div className='experiences-content'>
-        <p className='experiences-description'>{experience.description}</p>
+        <p className='experiences-description' dangerouslySetInnerHTML={{__html: experience.description}}></p>
         <GenerateExperienceImage embed={experience.embed} image={experience.image}/>
       </div>
     </li>
@@ -192,17 +192,17 @@ function AboutMe({isItalian}) {
   }
   return (
     <p>
-    I am a student
+    I'm a third-year student
     studying computer science
-    with a minor in Theology.
+    with a minor in theology.
     My favorite thing to do is solve problems,
-    the harder the better. I get excited at tough problem sets
+    the harder the better. I get excited when I receive tough problem sets
     (which may or may not be sane).
     I take math classes as my electives for fun and enjoy 
     visualizing that math in code.
     That doesn't mean I don't like computer science itself:
     I love learning about the lower-level implementations of abstract
-    concepts, like compilers and the shell.
+    concepts.
     And I love to use Vim. Hopefully that scores some points somewhere.
     <br/><br/>
     Outside of classes, I'm a big fan of films (check out my 
@@ -211,7 +211,7 @@ function AboutMe({isItalian}) {
     (<i>Howl's Moving Castle</i>, <i>Spirited Away</i>)
     and Alfred Hitchcock (<i>Rear Window</i>, <i>Vertigo</i>).
     My favorite video games are story-based or centered around puzzles and knowledge
-    (e.g. <i>Outer Wilds</i>, <i> Bioshock</i>, <i>Hollow Knight</i>).
+    (e.g. <i>Outer Wilds</i>, <i>Bioshock</i>, <i>Hollow Knight</i>).
     Beyond that, I like to teach myself piano, fold origami, or practice
     my Italian (and now, some French, too).
     </p>
@@ -267,6 +267,8 @@ function App() {
     }
   })
 
+  // useLayoutEffect(() => { window.scrollTo(0,0) })
+
   return (
     <>
       {/* Navigation Bar */}
@@ -303,10 +305,12 @@ function App() {
           <div className='header-copy'>
             <h1>Henry Jochaniewicz</h1>
             <h5 className='header-description'>
-            I'm a junior at the University of Notre Dame
-            and looking for a software engineering internship.
-            Scroll down to see my projects and coding capabilities.
-            That (as you can see) does not include front-end.
+            I'm a junior at the <em>University of Notre Dame</em>&#32;
+            studying computer science (with a minor in theology)
+            and looking for a <em>software engineering internship</em>.
+            My biggest interests are in <em>compilers</em>, <em>graphics</em>, and
+            &#32;<em>computability theory</em>.
+            Check out my classes, experiences, and projects below.
             </h5>
           </div>
           <div className='card-big'>
