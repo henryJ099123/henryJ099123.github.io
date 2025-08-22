@@ -895,7 +895,6 @@ a .hamburger-nav-item {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  overflow-x: scroll;
   gap: 1.5em;
 }
 
