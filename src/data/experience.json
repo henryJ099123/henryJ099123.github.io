@@ -4,7 +4,7 @@
         "employer": "IRES 2025 Research Program in Lyon, France",
         "title": "Undergraduate Researcher",
         "time": "May 2025 - August 2025",
-        "description": "This is a research internship under Dr. Michael Niemier that took place in Lyon, France at École Centrale de Lyon. With four other undergraduate students, I benchmarked figures of merit for different AES hardware accelerators from more than 11 academic research papers to compare to an under-development AES chip. To demonstrate trends in that data, I wrote up Python files and a Google Colab session to automatically generate graphs. These graphs and data were shown off in sponsor presentations! We additionally did some research on applying emerging memory technologies, specifically ferroelectrics, to an AES accelerator and presented a modified bitcell using 1FeFET-1C cells for the SubBytes step of encryption. Lastly, we formally presented our findings and contributions to over 30 PhD students and our advisor.<br></br>Beyond the research, being in France for two months was an incredible opportunity to engage with international students and a brand-new culture (and learn a bit of French)."
+        "description": "This is a research internship under Dr. Michael Niemier that took place in Lyon, France at École Centrale de Lyon. With 4 other undergraduate students, I benchmarked figures of merit for different AES hardware accelerators from more than 11 academic research papers to compare to an under-development AES chip. To demonstrate trends in that data, I wrote up Python files and a Google Colab session to automatically generate graphs. These graphs and data were shown off in sponsor presentations! We additionally did some research on applying emerging memory technologies, specifically ferroelectrics, to an AES accelerator and presented a modified bitcell using 1FeFET-1C cells for the SubBytes step of encryption. Lastly, we formally presented our findings and contributions to over 30 PhD students and our advisor.<br></br>Beyond the research, being in France for two months was an incredible opportunity to engage with international students and a brand-new culture (and learn a bit of French)."
     },
     {
         "id": 1,
@@ -31,7 +31,7 @@
     {
         "id": 4,
         "employer": "Kilwins Arlington Heights",
-        "title": "Floater/Senior Staff",
+        "title": "Senior Staff",
         "time": "July 2022 - January 2025",
         "description": "At Kilwins, the main ice cream and chocolate store near me, I provided friendly service, welcoming each customer at the door, offering samples of fudge, and helping them out with whatever they needed. I collaborated with my coworkers to serve lines of 100+ people for ice cream nearly every summer weekend, and I consistently worked about 25 hours/week in the summer and during all breaks. I also helped train a few new hires."
     }

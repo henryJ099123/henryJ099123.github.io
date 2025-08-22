@@ -1,25 +1,7 @@
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  /* min-width: 320px; */
-  /* min-height: 100vh; */
-}
-
-code {
-  font-family: "Roboto Mono", monospace;
-  color: var(--accent-color);
-  margin: 0 0.2em;
-} 
-
 pre {
   overflow-x: scroll;
   border-radius: 25px;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   font-size: 10pt;
 } 
 
@@ -35,8 +17,8 @@ blockquote {
     margin-left: 0.25em;
   } 
   font-size: 10pt;
-  border-left: 5px solid var(--accent-color);
-  background-color: var(--accent-color-bg-pale);
+  border-left: 5px solid var(--border-color);
+  background-color: var(--bg-color-pale);
   /*
   border-right: 2px solid var(--accent-color);
   border-top: 2px solid var(--accent-color);
@@ -57,7 +39,7 @@ blockquote:before {
 } 
 
 blockquote:hover {
-  background-color: var(--accent-color-bg);
+  background-color: var(--bg-hover-color-pale);
 } 
 
 .main-box {
@@ -102,7 +84,7 @@ blockquote:hover {
   flex: 1 1 300px;
   padding: 1em 2em;
   border-radius: 25px;
-  outline: 2px solid var(--black-color)
+  outline: 2px solid var(--border-color)
 } 
 
 .blog-select-title {
@@ -110,7 +92,7 @@ blockquote:hover {
 }
 
 .blog-line {
-  color: var(--black-color);
+  color: var(--border-color);
   overflow: visible;
   width: 100%;
 } 
@@ -128,7 +110,7 @@ blockquote:hover {
   position: fixed;
   background-color: white;
   transition-duration: var(--transition-time);
-  outline: 2px solid var(--black-color);
+  outline: 2px solid var(--border-color);
   .blog-select-title {
 	margin: 0
   } 
@@ -169,16 +151,18 @@ blockquote:hover {
   flex-wrap: nowrap;
   border-radius: 25px;
   padding: 0.5em 0.5em;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   transition-duration: var(--transition-time);
-  color: var(--black-color);
+  color: var(--text-button-color-light);
+  background-color: var(--bg-button-color);
   font-style: normal
 } 
 
 .blog-ind:hover {
-  background-color: var(--accent-color);
+  background-color: var(--bg-button-hover-color);
+  color: var(--text-button-hover-color-light);
   text-decoration: none;
-  outline: 2px solid var(--black-color);
+  outline: 2px solid var(--border-hover-color);
 } 
 
 .avatar {
@@ -188,7 +172,7 @@ blockquote:hover {
   object-fit: cover;
   object-position: center;
   padding: auto;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
 }
 
 .about-me {
@@ -219,26 +203,24 @@ blockquote:hover {
   margin: 0;
   max-width: 300px;
   border-radius: 25px;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
   transition-duration: var(--transition-time);
 }
 
 .about-me-text:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  outline-color: var(--border-hover-color);
   a, i {
-    color: white;
+    color: var(--highlight-hover-color);
   }
 }
 
 .credits {
-  color: gray;
+  color: var(--credits-color);
   text-align: center;
-}
-
-.credits-line {
-  width: 100%;
-  overflow: visible;
 }
 
 .hamburger-button2 {
@@ -247,9 +229,9 @@ blockquote:hover {
   justify-content: center;
   padding: 10px;
   border-radius: 50%;
-  outline: 2px solid var(--accent-color);
-  background-color: var(--black-color);
-  color: var(--black-color);
+  outline: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
   position: fixed;
   top: 5px;
   left: 5px;
@@ -262,8 +244,8 @@ blockquote:hover {
 }
 
 .hamburger-button2:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
+  background-color: var(--bg-color);
+  outline-color: var(--border-hover-color);
   .hamburger-picture {
     content: url("/src/assets/hamburger_black.svg")
   }

@@ -16,10 +16,12 @@ function AllRouter({ blogs }) {
   	<Routes>
 	  <Route path = '/'>
 		<Route index element={<App/>}/>
+        {/*
 		<Route path='blog/'>
 		  <Route index element={<BlogStart/>}/>
 		  {listBlogs}
 		</Route>
+        */}
 		<Route path='*' element={<Error/>}/>
 	  </Route>
 	</Routes>

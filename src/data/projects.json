@@ -33,7 +33,7 @@
     {
         "id": 3,
         "title": "this website",
-        "description": "I hope you've enjoyed looking at it (I spent a lot of time in these style sheets). It's built with React, and it's my first exposure to HTML and CSS. While I have technically used Javascript before, the last time I tried was before <code>let</code> existed...so basically brand new to JS too. While I don't plan on working in web development anytime soon, experiencing the process first-hand taught me about the importance of communication, as <em>anyone</em> will be checking out this site, not just developers, and visual communication of my contributions is key.",
+        "description": "I hope you've enjoyed looking at it (I spent a lot of time in these style sheets). It's built with React, and it's my first exposure to HTML and CSS. While I have technically used Javascript before, the last time I tried was before <code>let</code> existed...so basically brand new to JS too. While I don't plan on working in web development anytime soon, experiencing the process first-hand taught me about the importance of communication, as <i>anyone</i> will be checking out this site, not just developers, and visual communication of my contributions is key.",
         "is_shader": false
     }
 ]

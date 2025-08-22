@@ -23,7 +23,7 @@ function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) 
       <a className='no-underline' href="#experience"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "esperienzi" : "experiences"}</li></a>
       <a className='no-underline' href="#projects"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "progetti" : "projects"}</li></a>
       <a className='no-underline' href="#contact-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "mi contatti" : "contact me"}</li></a>
-      <a className='no-underline' href="/resume.pdf" target="_blank"><li className='hamburger-nav-item'>
+      <a className='no-underline' href="/jochaniewicz_henry_resume.pdf" target="_blank"><li className='hamburger-nav-item'>
         resumé
       </li></a>
       <a href="https://github.com/henryJ099123" target="_blank"><li className='hamburger-nav-item-github'>
@@ -86,9 +86,9 @@ function ListOfExperiences({experiences}) {
   const listItems = experiences.map(experience => 
     <li key={experience.id} className='experiences-ind' >
       <div className='experiences-titles'>
-        <h3 className='experiences-employer'>{experience.employer}</h3>
-        <h4 className='experiences-title'>{experience.title}</h4>
-        <h5 className='experiences-time'>{experience.time}</h5>
+        <h3>{experience.employer}</h3>
+        <h4><i>{experience.title}</i></h4>
+        <h5>{experience.time}</h5>
       </div>
       <div className='experiences-content'>
         <p className='experiences-description' dangerouslySetInnerHTML={{__html: experience.description}}></p>
@@ -99,11 +99,13 @@ function ListOfExperiences({experiences}) {
   return <ul className='experiences'>{listItems}</ul>
 }
 
-function ListOfCourses({courses, updater, isItalian, children}) {
-  const listItems = courses.map(course =>
-    <li key={course.id} className='course-ind' onClick={() => updater(course.id)}>
-      <p>{isItalian ? course.name_italian : course.name}</p>
-    </li>
+function ListOfCourses({courses, updater, index, isItalian, children}) {
+  const listItems = courses.map(course => 
+    index !== course.id ? 
+    <a key={course.id} className='course-ind' onClick={() => updater(course.id)}
+      href="#course-description"><p>{course.name}</p></a> :
+    <a key={course.id} className='course-ind-select' onClick={() => updater(course.id)}
+      href="#course-description"><p>{course.name}</p></a>
   )
   return <ul className='course-names'>{listItems}{children}</ul>
 }
@@ -118,7 +120,7 @@ function CourseDescription({image, embed, link, children}) {
   }
 
   return (
-  <div className='course-description'>
+  <div className='course-description' id='course-description'>
     <div className='course-text'>
       {children}
     </div>
@@ -192,20 +194,23 @@ function AboutMe({isItalian}) {
   }
   return (
     <p>
-    I'm a third-year student
+    I'm a student
     studying computer science
     with a minor in theology.
-    My favorite thing to do is solve problems,
-    the harder the better. I get excited when I receive tough problem sets
-    (which may or may not be sane).
-    I take math classes as my electives for fun and enjoy 
-    visualizing that math in code.
-    That doesn't mean I don't like computer science itself:
-    I love learning about the lower-level implementations of abstract
-    concepts.
-    And I love to use Vim. Hopefully that scores some points somewhere.
+    My favorite thing to do is solve problems:
+    I get excited when I receive tough problem sets
+    (which may or may not be sane), and
+    I take math classes as my electives (for fun).
+    Taken together, 
+    computer science is a perfect fit.
+    I'm not satisfied until I understand something inside and out,
+    which probably explains why I gravitate towards mathematical proofs
+    and getting under the hood of anything I come across.
+    I don't just want to <i>know</i>, but I want to <i>know why</i>.
     <br/><br/>
-    Outside of classes, I'm a big fan of films (check out my 
+    (And I love to use Vim. Hopefully that scores some points somewhere.)
+    <br/><br/>
+    Outside of classes, I'm a big fan of movies (check out my 
     <a href="https://letterboxd.com/henryj099/" target="_blank"> Letterboxd</a>),
     especially Studio Ghibli
     (<i>Howl's Moving Castle</i>, <i>Spirited Away</i>)
@@ -230,13 +235,30 @@ function ContactMeText({isItalian}) {
   return (<p style={{margin: "0"}}>
   Thanks for checking out my site! Send me an email at
   &#32;<a href="mailto:hjochani@nd.edu" target='_blank'>hjochani@nd.edu</a>&#32;
-  to contact me whether for any reason, whether about something professional, academic,
+  to contact me for any reason, whether about something professional or academic,
   or if you really need to talk to someone about how amazing Kurt Vonnegut's
   writing is.
+  {/*
   And if you're interested in seeing my <i>own</i> writing,
   &#32;<Link to="blog">check it out here</Link>.
+  */}
   </p>)
 }
+
+function OtherCourses({className}) {
+  return (
+    <div className={className}>
+      <p>
+      <i><strong>And that's not all!</strong></i> I've also taken
+      Engineering Design, Logic Design and Sequential Circuits, Calculus III,
+      Intro to Linear Algebra and Differential Equations,
+      Computer Architecture, Intro to Probability, Real Analysis, and Eschatology.
+      <br/><br/>
+      I'm currently taking Operating Systems, Compiler and Language Design,
+      Programming Paradigms, Topology, and Introduction to AI.
+      </p>
+    </div>)
+} 
 
 function getShaderByName(shaders, name) {
   return shaders.find((shader) => shader.name === name).data
@@ -279,6 +301,9 @@ function App() {
           <a className='no-underline' href="#experience"><li className='nav-item'>{isItalian ? "esperienzi" : "experiences"}</li></a>
           <a className='no-underline' href="#projects"><li className='nav-item'>{isItalian ? "progetti" : "projects"}</li></a>
           <a className='no-underline' href="#contact-me"><li className='nav-item'>{isItalian ? "mi contatti" : "contact me"}</li></a>
+          <a className='no-underline' href="/jochaniewicz_henry_resume.pdf" target="_blank"><li className='nav-item'>
+            resumé
+          </li></a>
         </div>
         <div className='right-nav-items'>
           {/* <li className='nav-item-language' onClick={() => setIsItalian(!isItalian)}>{isItalian ? "EN" : "IT"}</li> */}
@@ -287,9 +312,6 @@ function App() {
           </li></a>
           <a href="https://github.com/henryJ099123" target="_blank"><li className='nav-item-github'>
             <img className='github' src={githubLogoWhite} width={24} height={24}/>
-          </li></a>
-          <a className='no-underline' href="/resume.pdf" target="_blank"><li className='nav-item'>
-            resumé
           </li></a>
         </div>
       </ul>
@@ -308,9 +330,10 @@ function App() {
             I'm a junior at the <em>University of Notre Dame</em>&#32;
             studying computer science (with a minor in theology)
             and looking for a <em>software engineering internship</em>.
-            My biggest interests are in <em>compilers</em>, <em>graphics</em>, and
+            My interests are in <em>compiler design</em>, <em>graphics</em>, and
             &#32;<em>computability theory</em>.
-            Check out my classes, experiences, and projects below.
+            Check out my classes, experiences, and projects below
+            (and don't judge me on my front-end design please).
             </h5>
           </div>
           <div className='card-big'>
@@ -332,22 +355,14 @@ function App() {
           </div>
           <div className='courses-as-a-whole'>
             <div className='courses'> 
-              <ListOfCourses courses={courses} updater={setCourseIndex} isItalian={isItalian}>
-                <hr className='credits-line'></hr>
-                <div className='course-ind'>
-                  <p>
-                  And that's not all! I've also taken:
-                  Engineering Design, Logic Design and Sequential Circuits, Calculus III,
-                  Intro to Linear Algebra and Differential Equations,
-                  Computer Architecture, Intro to Probability, Real Analysis, and Eschatology.
-                  </p>
-                </div>
+              <ListOfCourses courses={courses} index={courseIndex} updater={setCourseIndex} isItalian={isItalian}>
               </ListOfCourses>
               <CourseDescription embed={curr_course.embed} image={curr_course.image} link={curr_course.link}>
                 <h3 className='course-title'>{isItalian ? curr_course.name_italian : curr_course.name}</h3>
                 <p dangerouslySetInnerHTML={{__html: isItalian ? curr_course.description_italian : curr_course.description}}></p>
               </CourseDescription>
             </div>
+            <OtherCourses className='experiences-ind'/>
           </div>
 
         </div>
@@ -393,11 +408,10 @@ function App() {
           </div>
 
           <div className='credits'>
-            <hr className='credits-line'></hr>
+            <hr ></hr>
             <p>Copyright &copy;2025 Henry Jochaniewicz. All rights reserved.</p>
           </div>
       </div>
-
     </>
   )
 }

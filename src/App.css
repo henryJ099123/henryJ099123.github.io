@@ -1,29 +1,7 @@
-#root {
-  /* max-width: 10000px;
-  max-height */
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--black-color);
-  font-family: "Noto Serif", serif;
-  line-height: 1.7;
-  font-weight: 450;
-  font-size: 11pt;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  background-color: white;
-  /*  --accent-color: rgb(060, 200, 170); */
-  --accent-color: rgb(255, 90, 61);
-  --accent-color-bg: rgba(255, 90, 61, 0.25);
-  --accent-color-bg-pale: rgba(255, 90, 61, 0.05);
-  --black-color: rgb(20,20,20);
-  --text-color: rgb(74, 68, 68);
-  --transition-time: 200ms;
-  --padding-amount: 0.7em;
-}
+html, body {
+  margin: 0;
+  min-height: 100%;
+} 
 
 html {
   scroll-behavior: smooth;
@@ -31,10 +9,66 @@ html {
 
 body {
   margin: 0;
+  /*  --accent-color: rgb(060, 200, 170); */
+  --accent-color: rgb(255, 90, 61);
+/*  --accent-color: rgb(255, 255, 0); */
+
+  --color1: #003049;
+  --color2: #d62828; /* or 214, 40, 40 */
+  --color3: #f77f00;
+  --color4: #fcbf49;
+  --color5: #eae2b7;
+  --color5: #fffad9;
+  --color5: #FFFFFF;
+  --color6: #4986fc;
+
+  --bg-color: var(--color1);
+  --bg-color-pale: rgba(214, 40, 40, 0.10);
+  --bg-hover-color: var(--color4);
+  --bg-hover-color-pale: rgba(214, 40, 40, 0.25);
+  --bg-button-color: var(--color1);
+  --bg-button-hover-color: var(--color2);
+  --bg-button-hover-color-alt: var(--color3);
+
+  --text-color: var(--color1);
+  --text-color-light: var(--color5);
+  --text-hover-color-light: var(--color1);
+  --text-button-color-light: var(--color5);
+  --text-button-hover-color-light: var(--color1);
+
+  --border-color: var(--color2);
+  --border-hover-color: var(--color1);
+  --highlight-color: var(--color2);
+  --highlight-hover-color: var(--color2);
+  --credits-color: gray;
+
+  --nav-color: var(--color1);
+  --nav-hover-color: var(--color2);
+
+
+  --transition-time: 200ms;
+  --padding-amount: 0.7em;
+
+  background-color: var(--color5);
+}
+
+#root {
+  /* max-width: 10000px;
+  max-height */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Noto Serif", serif;
+  line-height: 1.7;
+  font-weight: 450;
+  font-size: 11pt;
+  width: 100%;
+  height: 100%;
   display: flex;
-  place-items: center;
-  /* min-width: 320px; */
-  /* min-height: 100vh; */
+  flex-direction: column;
+  text-align: left;
+  color: var(--text-color);
 }
 
 h1 {
@@ -78,7 +112,7 @@ h6 {
 
 a {
   transition-duration: var(--transition-time);
-  color: var(--accent-color);
+  color: var(--highlight-color);
   text-decoration: none;
   font-style: italic;
   .nav-item {
@@ -92,10 +126,26 @@ ul {
 	padding-left: 1.1em	
   } 
 }
+
 em {
-  color: var(--accent-color);
+  color: var(--highlight-color);
   transition-duration: var(--transition-time);
   font-style: normal;
+}
+
+code {
+  font-family: "Roboto Mono", monospace;
+  /*
+  color: var(--highlight-color);
+  */
+  transition-duration: var(--transition-time);
+  margin: 0 0.2em;
+} 
+
+hr {
+  width:100%;
+  overflow: visible;
+  border: 1px solid var(--credits-color);
 }
 
 .scroll-less {
@@ -150,9 +200,9 @@ em {
   justify-content: center;
   padding: 10px;
   border-radius: 50%;
-  outline: 2px solid var(--accent-color);
-  background-color: var(--black-color);
-  color: var(--black-color);
+  outline: 2px solid var(--border-color);
+  background-color: var(--nav-color);
+  color: var(--nav-color);
   position: fixed;
   top: 5px;
   left: 5px;
@@ -165,8 +215,8 @@ em {
 }
 
 .hamburger-button:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
+  background-color: var(--nav-hover-color);
+  outline-color: var(--border-hover-color);
   .hamburger-picture {
     content: url("/src/assets/hamburger_black.svg")
   }
@@ -185,8 +235,8 @@ em {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: left;
-  background-color: var(--black-color);
-  color:white;
+  background-color: var(--nav-color);
+  color: var(--text-color-light);
   /*
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -194,7 +244,7 @@ em {
   padding: 0;
   margin: 0;
   top: 0%;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   height: 100%;
   width: 12em;
   transition: left 0.25s, right 0.25s;
@@ -202,7 +252,7 @@ em {
 
 .top-hamburger-nav-item {
   border-top-right-radius: 25px;
-  color: white;
+  color: var(--text-color-light);
   padding: 0.5em 0;
   padding-right: 1em;
   display: flex;
@@ -216,7 +266,7 @@ em {
 }
 
 .hamburger-nav-item {
-  color: white;
+  color: var(--text-color-light);
   height: 2.5em;
   font-size: 1.5em;
   transition-duration: var(--transition-time);
@@ -230,8 +280,8 @@ a .hamburger-nav-item {
 }
 
 .hamburger-nav-item:hover {
-  background-color: var(--accent-color);
-  color: var(--black-color);
+  background-color: var(--nav-hover-color);
+  color: var(--nav-color);
 }
 
 .hamburger-nav-item-github {
@@ -251,7 +301,7 @@ a .hamburger-nav-item {
 .hamburger-nav-item-github:hover {
   height: 2.5em;
   font-size: 1.5em;
-  background-color: var(--accent-color);
+  background-color: var(--nav-hover-color);
   .hamburger-github {
     content: url('/src/assets/github-mark/github-mark.svg')
   }
@@ -272,7 +322,7 @@ a .hamburger-nav-item {
 }
 
 .hamburger-nav-item-linkedin:hover {
-  background-color: var(--accent-color);
+  background-color: var(--nav-hover-color);
   .hamburger-linkedin {
     content: url('/src/assets/in-logo/InBug-Black.png')
   }
@@ -294,7 +344,7 @@ a .hamburger-nav-item {
   font-weight: 900;
   font-size: 1.5em;
   font-variation-settings: "wdth" 100;
-  color: white;
+  color: var(--text-color-light);
   height: 2.5em;
   width: 10em;
   font-size: 2em;
@@ -305,8 +355,8 @@ a .hamburger-nav-item {
 }
 
 .hamburger-nav-item-language:hover {
-  background-color: var(--accent-color);
-  color: var(--black-color)
+  background-color: var(--nav-hover-color);
+  color: var(--nav-color)
 }
 
 .navigation {
@@ -322,9 +372,9 @@ a .hamburger-nav-item {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: var(--black-color);
+  background-color: var(--nav-color);
   border-bottom: 2px solid;
-  border-color: var(--accent-color);
+  border-color: var(--border-color);
   z-index: 2;
 }
 
@@ -345,7 +395,7 @@ a .hamburger-nav-item {
 
 .nav-item {
   margin: auto;
-  color: white;
+  color: var(--text-color-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -357,8 +407,8 @@ a .hamburger-nav-item {
 }
 
 .nav-item:hover {
-  background-color: var(--accent-color);
-  color: var(--black-color);
+  background-color: var(--nav-hover-color);
+  color: var(--nav-color);
 }
 
 .nav-item-language {
@@ -368,7 +418,7 @@ a .hamburger-nav-item {
   font-size: 1.5em;
   /* font-variation-settings: "wdth" 100; */
   margin: auto;
-  color: white;
+  color: var(--text-color-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -379,8 +429,8 @@ a .hamburger-nav-item {
 }
 
 .nav-item-language:hover {
-  background-color: var(--accent-color);
-  color: var(--black-color)
+  background-color: var(--nav-hover-color);
+  color: var(--nav-color)
 }
 
 .nav-item-github {
@@ -399,7 +449,7 @@ a .hamburger-nav-item {
 }
 
 .nav-item-github:hover {
-  background-color: var(--accent-color);
+  background-color: var(--nav-hover-color);
   .github  {
     content: url("/src/assets/github-mark/github-mark.svg");
     width: 24px;
@@ -423,7 +473,7 @@ a .hamburger-nav-item {
 }
 
 .nav-item-linkedin:hover {
-  background-color: var(--accent-color);
+  background-color: var(--nav-hover-color);
 }
 
 .nav-item-linkedin:hover .linkedin {
@@ -439,16 +489,18 @@ a .hamburger-nav-item {
   /* min-width: 200px; */
   padding: 1em 1em;
   border-radius: 25px;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   transition-duration: var(--transition-time);
-  /* background-color: red; */
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
 }
 
 .text-box:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
-  a {
-    color: white
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  outline-color: var(--border-hover-color);
+  a, em, code {
+    color: var(--highlight-hover-color);
   }
 }
 
@@ -462,13 +514,14 @@ a .hamburger-nav-item {
   justify-content: center;
   height: 75px;
   height: fit-content;
-  /* background-color: var(--black-color); */
-  color: var(--black-color);
+  /* background-color: var(--text-color); */
+  color: var(--text-color);
 }
 /* 
 .headers:hover {
-  background-color: var(--accent-color);
-  color: black;
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  color: var(--text-color);
   transition-duration: var(--transition-time)
 } */
 
@@ -504,7 +557,7 @@ a .hamburger-nav-item {
   width: 225px;
   height: 225px;
   cursor: pointer;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   transition-duration: var(--transition-time);
   /* display: block; */
   /* outline: 5px solid rgb(0, 255, 21); */
@@ -554,31 +607,32 @@ a .hamburger-nav-item {
 .courses-as-a-whole {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.5em;
 }
 
+/*
 .other-courses {
   padding: 1em;
   border-radius: 25px;
-  outline: 2px solid var(--accent-color);
-  color: var(--black-color);
+  outline: 2px solid var(--border-color);
+  color: var(--text-color);
   transition-duration: var(--transition-time);
 }
 
 .other-courses:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  outline-color: var(--border-hover-color);
   a {
-    color: white;
+    color: var(--text-color-light);
   }
 }
+*/
 
 .courses {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   align-items: flex-start;
   gap: 1em;
   /* outline: 1px solid rgb(71, 0, 251); */
@@ -593,42 +647,72 @@ a .hamburger-nav-item {
   /* width: min-content; */
   justify-content: center;
   padding: 0;
-  align-self: flex-start;
   flex: 1 1 200px;
   gap: 0.5em;
   /* border-radius: 25px; */
-  /* outline: 1px solid var(--accent-color); */
+  /* outline: 1px solid var(--border-color); */
 }
 
 .course-ind {
-  /* flex: 1 1 400px; */
-  /* max-width: 40%; */
-  /* width: max-content; */
   list-style-type: none;
   text-align: center;
-  background-color: white;
-  color: var(--black-color);
-  cursor: pointer;
   padding: 0 var(--padding-amount);
+  font-style: normal;
+  cursor: pointer;
   transition-duration: var(--transition-time);
   border-radius: 25px;
-  outline: 2px solid var(--accent-color)
+  background-color: var(--bg-button-color);
+  color: var(--text-button-color-light);
+  outline: 2px solid var(--border-color)
 }
+
+.course-ind-select {
+  list-style-type: none;
+  text-align: center;
+  padding: 0 var(--padding-amount);
+  font-style: normal;
+  cursor: pointer;
+  transition-duration: var(--transition-time);
+  border-radius: 25px;
+  text-decoration: none;
+  background-color: var(--bg-button-hover-color-alt);
+  color: var(--text-button-hover-color-light);
+  outline: 2px solid var(--border-hover-color);
+}
+
+.course-ind-select:hover {
+  text-decoration: none
+} 
 
 .course-ind:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
-  color: var(--black-color);
+  text-decoration: none;
+  background-color: var(--bg-button-hover-color);
+  color: var(--text-button-hover-color-light);
+  outline-color: var(--border-hover-color);
 }
 
-.course-ind:visited {
-  background-color: var(--accent-color);
-  color: black;
+.other-courses-alone {
+  text-align: center;
+  padding: 0 var(--padding-amount);
+  color: var(--text-color);
+  font-style: normal;
+  transition-duration: var(--transition-time);
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
+  border-radius: 25px;
+  outline: 2px solid var(--border-color)
+}
+
+.other-courses-alone:hover {
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  outline-color: var(--border-hover-color);
+  color: var(--text-color);
 }
 
 .course-content-image {
   margin: 1em;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   transition-duration: var(--transition-time)
 }
 
@@ -639,20 +723,20 @@ a .hamburger-nav-item {
 .course-content-embed {
   /* flex: 1 1 300px; */
   cursor: pointer;
-  background-color: var(--black-color);
-  color: white;
+  background-color: var(--text-color);
+  color: var(--text-color-light);
   padding: 15px;
   border-radius: 25px;
   font-style: normal;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   transition-duration: var(--transition-time);
   /* max-width: 640px;
   height: 480px; */
 }
 
 .course-content-embed:hover {
-  background-color: white;
-  color: var(--black-color);
+  background-color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 .course-text {
@@ -682,31 +766,35 @@ a .hamburger-nav-item {
   /* flex-grow: 2; */
   /* max-width: 500px; */
   /* min-width: 100px; */
+  scroll-margin-top: 80px;
   border-radius: 25px;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
   transition-duration: var(--transition-time)
 }
 
 .course-description:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  outline-color: var(--border-hover-color);
 }
 
 .course-description:hover .course-content-embed {
-  outline-color: white
+  outline-color: var(--text-color-light)
 }
 
 .course-description:hover a {
-  color: white
+  color: var(--highlight-hover-color);
 }
 
 
 .course-description:hover .course-content-embed:hover {
-  outline-color: var(--black-color);
+  outline-color: var(--border-hover-color);
 }
 
 .course-description:hover .course-content-image {
-  outline-color: var(--black-color);
+  outline-color: var(--border-hover-color);
 }
 
 .experiences {
@@ -733,7 +821,11 @@ a .hamburger-nav-item {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  margin: 1em;
   gap: 1em;
+  h5, h3, h4 {
+    margin: 0
+  } 
 }
 
 .experiences-employer {
@@ -764,7 +856,6 @@ a .hamburger-nav-item {
 .experiences-description {
   flex: 1 1 300px;
   text-align: left;
-  margin-bottom: 0
 }
 
 .experiences-ind {
@@ -775,28 +866,24 @@ a .hamburger-nav-item {
   justify-content: space-around;
   gap: 10px;
   border-radius: 25px;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   padding: 1em;
   transition-duration: var(--transition-time);
-  .avatar {
-    outline: 2px solid var(--accent-color);
-    transition-duration: var(--transition-time);
-  }
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
 }
 
 .experiences-ind:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
-  .avatar {
-    outline: 2px solid var(--black-color)
-  }
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  outline-color: var(--border-hover-color);
   .domer-rover {
-    outline: 2px solid var(--black-color)
+    outline: 2px solid var(--border-hover-color)
   }
 }
 
 .domer-rover {
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   transition-duration: var(--transition-time);
 }
 
@@ -808,17 +895,7 @@ a .hamburger-nav-item {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  /*
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  align-items: flex-start;
-  */
-  /*
-  grid-template-areas:
-    "main main"
-    "main main";
-  */
+  overflow-x: scroll;
   gap: 1.5em;
 }
 
@@ -832,7 +909,9 @@ a .hamburger-nav-item {
   align-items: center;
   align-content: stretch;
   transition-duration: var(--transition-time);
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
   width: fit-content;
   /* width: max-content; */
   /* gap: 1.5em; */
@@ -840,25 +919,22 @@ a .hamburger-nav-item {
 }
 
 .project-ind:hover {
-  background-color: var(--accent-color);
-  color: black;
-  outline-color: var(--black-color);
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  color: var(--text-color);
+  outline-color: var(--border-hover-color);
+
   code, a, em {
-    color: white
+    color: var(--highlight-hover-color);
   } 
 }
 
 .project-ind:hover .shaderCanvas {
-  outline-color: var(--black-color)
+  outline-color: var(--border-hover-color)
 }
 
 .project-ind:hover .project-content {
-  outline-color: var(--black-color)
-}
-
-.project-ind:hover a {
-  /* color: var(--black-color) */
-  color: white
+  outline-color: var(--border-hover-color)
 }
 
 .project-title {
@@ -870,7 +946,7 @@ a .hamburger-nav-item {
 
 .project-content {
   height: auto;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   transition-duration: var(--transition-time)
 }
 
@@ -902,26 +978,25 @@ a .hamburger-nav-item {
   margin: 0;
   max-width: 600px;
   border-radius: 25px;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color-light);
   transition-duration: var(--transition-time);
 }
 
 .contact-me-text:hover {
-  background-color: var(--accent-color);
-  outline-color: var(--black-color);
-  a, em {
-    color: white;
+  background-color: var(--bg-hover-color);
+  color: var(--text-hover-color-light);
+  outline-color: var(--border-hover-color);
+  a, em, code {
+    color: var(--highlight-hover-color);
   }
 }
 
 .credits {
-  color: gray;
+  color: var(--credits-color);
 }
 
-.credits-line {
-  width:100%;
-  overflow: visible;
-}
 
 .avatar {
   border-radius: 50%;
@@ -936,7 +1011,7 @@ a .hamburger-nav-item {
   border-radius: 25%;
   object-fit:cover;
   object-position: 0 60%;
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--border-color);
   padding: auto;
 }
 
@@ -949,7 +1024,7 @@ a .hamburger-nav-item {
   margin: 3em 15vw;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .everything-box {
     margin: 5vw;
     margin-top: 3em;
@@ -997,7 +1072,7 @@ a .hamburger-nav-item {
   }
 }
 
-@media screen and (min-width: 751px) {
+@media screen and (width >= 751px) {
   .avatar-big {
     width: 300px;
     height: 300px;
@@ -1032,7 +1107,7 @@ a .hamburger-nav-item {
   
 }
 
-@media screen and (max-width: 750px) and (min-width: 451px) {
+@media screen and (width <= 750px) and (width >= 451px) {
   /* .everything-box {
     padding: 1em 1em;
   } */
@@ -1083,4 +1158,15 @@ a .hamburger-nav-item {
     flex: 1 1 300px;
   } */
 }
+
+/*
+@media screen and (width <= 735px) {
+  .other-courses-w-courses {
+    display: none
+  } 
+  .other-courses-alone {
+    display: inline; 
+  } 
+} 
+*/
 
