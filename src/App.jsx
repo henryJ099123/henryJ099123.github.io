@@ -302,7 +302,7 @@ function App() {
           <a className='no-underline' href="#projects"><li className='nav-item'>{isItalian ? "progetti" : "projects"}</li></a>
           <a className='no-underline' href="#contact-me"><li className='nav-item'>{isItalian ? "mi contatti" : "contact me"}</li></a>
           <a className='no-underline' href="/jochaniewicz_henry_resume.pdf" target="_blank"><li className='nav-item'>
-            resumé
+            résumé
           </li></a>
         </div>
         <div className='right-nav-items'>
