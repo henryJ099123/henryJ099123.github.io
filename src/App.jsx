@@ -24,7 +24,7 @@ function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) 
       <a className='no-underline' href="#projects"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "progetti" : "projects"}</li></a>
       <a className='no-underline' href="#contact-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "mi contatti" : "contact me"}</li></a>
       <a className='no-underline' href="/jochaniewicz_henry_resume.pdf" target="_blank"><li className='hamburger-nav-item'>
-        resumé
+        résumé
       </li></a>
       <a href="https://github.com/henryJ099123" target="_blank"><li className='hamburger-nav-item-github'>
         <img src={githubLogoWhite} className='hamburger-github'/>
