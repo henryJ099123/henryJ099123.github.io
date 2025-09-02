@@ -1,6 +1,6 @@
 import { useState, useLayoutEffect } from 'react'
 import blogs from './data/blogs.json'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import profilePic from './assets/hiking_me.jpg'
 import crossBlack from './assets/cross_black.svg'
@@ -10,8 +10,9 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { gruvboxDark as dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 function BlogSelect({ blogs }) {
+  const location = useLocation()
   const blogList = blogs.map(blog => blog.id > 5 ? <></> : 
-	<Link to={'../' + blog.urlname} key={blog.id + 4} className='blog-ind'>
+	<Link to={'../' + blog.urlname} key={blog.id + 4} className={location.pathname.split('/').pop() === blog.urlname ? 'blog-ind-select' : 'blog-ind'}>
 	  <div>{blog.name}</div>
 	  <i>{blog.date}</i>
 	</Link>
