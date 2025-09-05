@@ -498,7 +498,7 @@ a .hamburger-nav-item {
   background-color: var(--bg-hover-color);
   color: var(--text-hover-color-light);
   outline-color: var(--border-hover-color);
-  a, em, code {
+  a /*, em, code*/ {
     color: var(--highlight-hover-color);
   }
 }
@@ -922,7 +922,7 @@ a .hamburger-nav-item {
   color: var(--text-color);
   outline-color: var(--border-hover-color);
 
-  code, a, em {
+  a /*code, em*/ {
     color: var(--highlight-hover-color);
   } 
 }
@@ -986,7 +986,7 @@ a .hamburger-nav-item {
   background-color: var(--bg-hover-color);
   color: var(--text-hover-color-light);
   outline-color: var(--border-hover-color);
-  a, em, code {
+  a /*, em, code*/ {
     color: var(--highlight-hover-color);
   }
 }

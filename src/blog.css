@@ -73,11 +73,10 @@ blockquote:hover {
 } 
 
 .blog-container {
-  flex: 2 1 400px;
+  flex: 2 0 400px;
   padding: 0;
   margin: 0;
   max-width: 700px;
-  min-width: 0px;
 } 
 
 .blog {
@@ -195,6 +194,7 @@ blockquote:hover {
 
 .about-me {
   display: flex;
+  width: fit-content;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
