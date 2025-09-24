@@ -20,7 +20,7 @@ function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) 
       <li className='top-hamburger-nav-item'><img className='cross' onClick={exitClick} src={crossWhite}/></li>
       <a className='no-underline' href="#about-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "su me" : "about me"}</li></a>
       <a className='no-underline' href="#courses"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "corsi" : "courses"}</li></a>
-      <a className='no-underline' href="#experience"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "esperienzi" : "experiences"}</li></a>
+      <a className='no-underline' href="#experience"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "esperienzi" : "experience"}</li></a>
       <a className='no-underline' href="#projects"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "progetti" : "projects"}</li></a>
       <a className='no-underline' href="#contact-me"><li className='hamburger-nav-item' onClick={exitClick}>{isItalian ? "mi contatti" : "contact me"}</li></a>
       <a className='no-underline' href="/jochaniewicz_henry_resume.pdf" target="_blank"><li className='hamburger-nav-item'>
@@ -298,7 +298,7 @@ function App() {
         <div className='left-nav-items'>
           <a className='no-underline' href="#about-me"><li className='nav-item'>{isItalian ? "su me" : "about me"}</li></a>
           <a className='no-underline' href="#courses"><li className='nav-item'>{isItalian ? "corsi" : "courses"}</li></a>
-          <a className='no-underline' href="#experience"><li className='nav-item'>{isItalian ? "esperienzi" : "experiences"}</li></a>
+          <a className='no-underline' href="#experience"><li className='nav-item'>{isItalian ? "esperienzi" : "experience"}</li></a>
           <a className='no-underline' href="#projects"><li className='nav-item'>{isItalian ? "progetti" : "projects"}</li></a>
           <a className='no-underline' href="#contact-me"><li className='nav-item'>{isItalian ? "mi contatti" : "contact me"}</li></a>
           <a className='no-underline' href="/jochaniewicz_henry_resume.pdf" target="_blank"><li className='nav-item'>
@@ -332,7 +332,7 @@ function App() {
             and looking for a <em>software engineering internship</em>.
             My interests are in <em>compiler design</em>, <em>graphics</em>, and
             &#32;<em>computability theory</em>.
-            Check out my classes, experiences, and projects below
+            Check out my classes, experience, and projects below
             (and don't judge me on my front-end design please).
             </h5>
           </div>
