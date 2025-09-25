@@ -646,7 +646,7 @@ a .hamburger-nav-item {
   /* width: min-content; */
   justify-content: center;
   padding: 0;
-  flex: 1 1 200px;
+  flex: 2 1 200px;
   gap: 0.5em;
   /* border-radius: 25px; */
   /* outline: 1px solid var(--border-color); */

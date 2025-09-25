@@ -70,7 +70,7 @@ function ListOfProjects({projects, shaders, shaderIndices, onClickShader, isItal
         
     </li>
   )
-  return <ul className='projects'>{listItems}</ul>
+  return <ul className='projects' reversed>{listItems}</ul>
 }
 
 function GenerateExperienceImage({embed, image}) {
@@ -199,8 +199,9 @@ function AboutMe({isItalian}) {
     with a minor in theology.
     My favorite thing to do is solve problems:
     I get excited when I receive tough problem sets
-    (which may or may not be sane), and
-    I take math classes as my electives (for fun).
+    (which may or may not be sane) love the thrill
+    of overcoming them, and
+    take math classes as my electives (for fun).
     Taken together, 
     computer science is a perfect fit.
     I'm not satisfied until I understand something inside and out,
@@ -251,11 +252,12 @@ function OtherCourses({className}) {
       <p>
       <i><strong>And that's not all!</strong></i> I've also taken
       Engineering Design, Logic Design and Sequential Circuits, Calculus III,
-      Intro to Linear Algebra and Differential Equations,
+      Intro to Linear Algebra and Differential Equations, Data Structures,
       Computer Architecture, Intro to Probability, Real Analysis, and Eschatology.
       <br/><br/>
       I'm currently taking Operating Systems, Compiler and Language Design,
-      Programming Paradigms, Topology, and Introduction to AI.
+      Programming Paradigms, Topology, Introduction to AI, and undergraduate research
+      under Professor Daniel Rehberg.
       </p>
     </div>)
 } 
@@ -330,7 +332,8 @@ function App() {
             I'm a junior at the <em>University of Notre Dame</em>&#32;
             studying computer science (with a minor in theology)
             and looking for a <em>software engineering internship</em>.
-            My interests are in <em>compiler design</em>, <em>graphics</em>, and
+            My interests are in <em>operating systems software</em>,
+            &#32;<em>language design</em>, <em>graphics</em>, and
             &#32;<em>computability theory</em>.
             Check out my classes, experience, and projects below
             (and don't judge me on my front-end design please).
@@ -338,6 +341,7 @@ function App() {
           </div>
           <div className='card-big'>
             <img src={profilePic} className='avatar-big'/>
+            <h6 style={{"font-weight": "normal"}}>(me in Chamonix)</h6>
           </div>
         </div>
 

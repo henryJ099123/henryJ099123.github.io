@@ -25,10 +25,9 @@
       "link": "/finalProject.pdf"
     },
     {
-      "id": 3,
-      "name": "Data Structures",
-      "name_italian": "Strutture dati",
-      "description": "Your classic data structures class, taught in both C and Python. In C, we implemented dynamic arrays, linked lists, sorting algorithms, hash maps, sets, stacks, and more, while in Python, we implemented doubly linked lists, trees, binary trees, self-rotating trees, heaps, graphs, and graph search algorithms. The class also covered common algorithms, such as BFS, DFS, Dijkstra's, Prim's, Kahn's, heapsort, merge sort, quicksort, and more."
+        "id": 3,
+        "name": "Operating Systems Principles",
+        "description": "This course covers three important themes of operating systems: virtualization, concurrency, and persistence. In this class, we cover system calls, OS scheduling and different scheduling algorithms, concurrency via events and threads, virtual memory, the file system, and more. I've implemented a process queue shell in C that allows the user to simulate running background processes on multiple cores via FIFO, Round Robin, and MLFQ, but the next projects involve a server hosting a chat service, an implementation of <code>malloc</code>, and a file system."
     },
     {
       "id": 4,
@@ -41,5 +40,15 @@
       "id": 5,
       "name": "Passage to Italy",
       "description": "This is a fifth-semester Italian class to refine grammar and understand Italian culture from the 11th century onward. I read literature from ancient authors (e.g. Dante, Cavalcanti, San Francesco d'Assisi), analyzed art of the Renaissance and Baroque periods (e.g. Michelangelo, Raffaelo, Caravaggio), compared those eras to recent authors and art movements (Leopardi, Primo Levi, futurismo) and studied Italian history to boot (reunification, Risorgimento). Check out my final paper, a comparison of Michelangelo's <i>Pietà</i>, <a href=\"/le_pieta.pdf\" target=\"_blank\"<a>here</a>."
-    }
+    },
+    {
+        "id": 6,
+        "name": "Compilers and Language Design",
+        "description": "This class involves building a compiler for a C-like language called B-minor from scratch. So far, we've built a scanner using Flex, implemented a string encoder and decoder for various escapec codes, and learned about different parsing techniques regarding LL(1) and LR(1) grammars. We will ultimately build a shift-reduce parser to transform source code into an abstract syntax tree to then generate x86 assembly code in the codegen phase."
+    },
+    {
+        "id": 7,
+        "name": "Undergraduate Research in Computer Graphics",
+        "description": "Under Professor Daniel Rehberg, I'm working on a project simulating Aeolian sand simulations using OpenGL with 3 other undergraduates. From this project, I'm learning some professional software development techniques, studying the graphics pipeline, practicing my shaders, and hopefully generating some cool-looking sand graphics."
+    } 
   ]

@@ -1,0 +1,7 @@
+{
+  "id": 3,
+  "name": "Data Structures",
+  "name_italian": "Strutture dati",
+  "description": "Your classic data structures class, taught in both C and Python. In C, we implemented dynamic arrays, linked lists, sorting algorithms, hash maps, sets, stacks, and more, while in Python, we implemented doubly linked lists, trees, binary trees, self-rotating trees, heaps, graphs, and graph search algorithms. The class also covered common algorithms, such as BFS, DFS, Dijkstra's, Prim's, Kahn's, heapsort, merge sort, quicksort, and more."
+},
+
