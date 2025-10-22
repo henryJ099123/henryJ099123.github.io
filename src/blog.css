@@ -1,12 +1,7 @@
 pre {
-  overflow-x: scroll;
   border-radius: 25px;
   outline: 2px solid var(--border-color);
   font-size: 10pt;
-} 
-
-a:hover {
-  text-decoration: underline
 } 
 
 blockquote {
@@ -49,10 +44,7 @@ blockquote:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin: 3em 2em;
 } 
 
 .title-and-date {
@@ -63,9 +55,6 @@ blockquote:hover {
   padding: 0 1em;
 } 
 
-.title {
-} 
-
 .date {
   display: flex;
   flex-direction: column;
@@ -73,9 +62,10 @@ blockquote:hover {
 } 
 
 .blog-container {
-  flex: 2 0 400px;
+  flex: 1 1 400px;
   padding: 0;
   margin: 0;
+  min-width: 0px;
   max-width: 700px;
 } 
 
@@ -171,9 +161,9 @@ blockquote:hover {
   flex-wrap: nowrap;
   border-radius: 25px;
   padding: 0.5em 0.5em;
-  outline: 2px solid var(--border-color);
+  outline: 2px solid var(--border-hover-color);
   transition-duration: var(--transition-time);
-  color: var(--text-button-color-light);
+  color: var(--text-button-hover-color-light);
   background-color: var(--bg-button-hover-color-alt);
   font-style: normal
 } 
@@ -248,8 +238,8 @@ blockquote:hover {
   padding: 10px;
   border-radius: 50%;
   outline: 2px solid var(--border-color);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--nav-color);
+  color: var(--nav-color);
   position: fixed;
   top: 5px;
   left: 5px;
@@ -262,7 +252,7 @@ blockquote:hover {
 }
 
 .hamburger-button2:hover {
-  background-color: var(--bg-color);
+  background-color: var(--nav-hover-color);
   outline-color: var(--border-hover-color);
   .hamburger-picture {
     content: url("/src/assets/hamburger_black.svg")
@@ -285,6 +275,12 @@ blockquote:hover {
 
 .cross {
   cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  outline: 2px solid var(--border-color);
+  transition-duration: var(--transition-time)
 }
 
 @media screen and (width <= 685px) {

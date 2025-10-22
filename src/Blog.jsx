@@ -9,10 +9,14 @@ import './blog.css'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { gruvboxDark as dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
+
+function isSelected(name, selected, notSelected) {
+  return useLocation().pathname.split('/').pop() === name ? selected : notSelected
+} 
+
 function BlogSelect({ blogs }) {
-  const location = useLocation()
   const blogList = blogs.map(blog => blog.id > 5 ? <></> : 
-	<Link to={'../' + blog.urlname} key={blog.id + 4} className={location.pathname.split('/').pop() === blog.urlname ? 'blog-ind-select' : 'blog-ind'}>
+	<Link to={'../' + blog.urlname} key={blog.id + 4} className={isSelected(blog.urlname, 'blog-ind-select', 'blog-ind')}>
 	  <div>{blog.name}</div>
 	  <i>{blog.date}</i>
 	</Link>
@@ -31,7 +35,8 @@ function BlogSelect({ blogs }) {
 function BlogSelectHam({ shouldShow, blogs, exitClick }) {
   const style_var = shouldShow ? {"left": "0"} : {"left": "-20em"}
   const blogList = blogs.map(blog => blog.id > 5 ? <></> : 
-	<Link to={'../' + blog.urlname} key={blog.id + 5} onClick={exitClick} className='blog-ind'>
+	<Link to={'../' + blog.urlname} key={blog.id + 5} onClick={exitClick} className=
+      {isSelected(blog.urlname, 'blog-ind-select', 'blog-ind')}>
 	  <div>{blog.name}</div>
 	  <i>{blog.date}</i>
 	</Link>
@@ -81,7 +86,15 @@ function Blog({ index }) {
           pre({children}) {
             return <>{children}</>
           }, 
-          code({children, className, node, ...rest}) {
+          em({children}) {
+            return <i>{children}</i>
+          },
+          img({children, src, ...rest}) {
+            return (<a href={src} target="_blank">
+              <img src={src} className='content'>{children}</img>
+              </a>)
+          },
+          code({children, className, ...rest}) {
             const match = /language-(\w+)/.exec(className || '')
             return match ? (
               <SyntaxHighlighter 
