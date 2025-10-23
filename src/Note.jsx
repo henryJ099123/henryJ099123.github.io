@@ -116,7 +116,7 @@ function Note({ index }) {
 		  <h3 className='about-me-header'>about me</h3>	
 		  <p>
 			Hello, I'm Henry Jochaniewicz and I'm the one who wrote this.
-			I hope you enjoyed it! You can check out my main page <a>here</a>.
+			I hope you enjoyed it! You can check out my main page <Link to='/'>here</Link>.
 		  </p>
 		</div>
 		<div className='credits'>
