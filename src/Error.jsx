@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import blogs from './data/blogs.json'
+import notes from './data/notes.json'
 import Markdown from 'react-markdown'
 import { Link, Outlet } from 'react-router-dom'
 import './App.css'
@@ -11,11 +11,11 @@ function Error() {
 	  <div className='contact-me-text'>
 		<p>
 		Not sure how you got here, but this page doesn't exist.
-        If this is a blog site, it's probably still under construction.
+        If this is a note site, it's probably still under construction.
 		You probably either want	
 		to <Link to='/'>check out the main page</Link>, but
 		if you want to see some of my thoughts written out,
-		check out <Link to='/blog'>my blog</Link>&#32;
+		check out <Link to='/note'>my note</Link>&#32;
         (but this doesn't exist yet).
 		</p>
 	  </div>

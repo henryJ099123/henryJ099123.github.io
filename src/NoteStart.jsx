@@ -1,38 +1,38 @@
 import { useLayoutEffect } from 'react'
-import blogs from './data/blogs.json'
+import notes from './data/notes.json'
 import { Link, Outlet } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import profilePic from './assets/hiking_me.jpg'
 import crossBlack from './assets/cross_black.svg'
 import HamburgerButton from './HamburgerButton.jsx'
-import './blog.css'
+import './note.css'
 
 
-function BlogSelect({ blogs }) {
-  const blogList = blogs.map(blog =>  
-	<Link to={blog.urlname} key={blog.id + 2} className='blog-ind'>
-	  <div>{blog.name}</div>
-	  <i>{blog.date}</i>
+function NoteSelect({ notes }) {
+  const noteList = notes.map(note =>  
+	<Link to={note.urlname} key={note.id + 2} className='note-ind'>
+	  <div>{note.name}</div>
+	  <i>{note.date}</i>
 	</Link>
 	)
   return (
-	<ul className='blog-select2'>
-	  {blogList}
-	  <hr key={1} className='blog-line'></hr>
-	  <Link to="/" key={0} className='blog-ind'>main page</Link>
+	<ul className='note-select2'>
+	  {noteList}
+	  <hr key={1} className='note-line'></hr>
+	  <Link to="/" key={0} className='note-ind'>main page</Link>
 	 </ul>
 	 )
 } 
 
-function BlogStart() {
+function NoteStart() {
 
   useLayoutEffect(() => { window.scrollTo(0, 0) })
 
   return(
     <div className='main-box'>
       <div className='box'>
-        <h1>blogs</h1>
-        <BlogSelect blogs={blogs}/>
+        <h1>notes</h1>
+        <NoteSelect notes={notes}/>
       </div>
       <div className='about-me2'>
 		<div className='card'>
@@ -41,7 +41,7 @@ function BlogStart() {
         <div className='about-me-text'>
           <h3 className='about-me-header'>about me</h3>	
           <p>
-            Hello, I'm Henry Jochaniewicz and this is my blog.
+            Hello, I'm Henry Jochaniewicz and this is my note.
             I hope you enjoyed checking it out! You can check out my main page <Link to="/">here</Link>.
           </p>
         </div>
@@ -53,4 +53,4 @@ function BlogStart() {
   </div>)
 }
 
-export default BlogStart;
+export default NoteStart;

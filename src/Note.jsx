@@ -1,11 +1,11 @@
 import { useState, useLayoutEffect } from 'react'
-import blogs from './data/blogs.json'
+import notes from './data/notes.json'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import profilePic from './assets/hiking_me.jpg'
 import crossBlack from './assets/cross_black.svg'
 import HamburgerButton from './HamburgerButton.jsx'
-import './blog.css'
+import './note.css'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { gruvboxDark as dark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
@@ -14,47 +14,47 @@ function isSelected(name, selected, notSelected) {
   return useLocation().pathname.split('/').pop() === name ? selected : notSelected
 } 
 
-function BlogSelect({ blogs }) {
-  const blogList = blogs.map(blog => blog.id > 5 ? <></> : 
-	<Link to={'../' + blog.urlname} key={blog.id + 4} className={isSelected(blog.urlname, 'blog-ind-select', 'blog-ind')}>
-	  <div>{blog.name}</div>
-	  <i>{blog.date}</i>
+function NoteSelect({ notes }) {
+  const noteList = notes.map(note => note.id > 5 ? <></> : 
+	<Link to={'../' + note.urlname} key={note.id + 4} className={isSelected(note.urlname, 'note-ind-select', 'note-ind')}>
+	  <div>{note.name}</div>
+	  <i>{note.date}</i>
 	</Link>
 	)
   return (
-	<ul className='blog-select'>
-	  <h3 key={0} className='blog-select-title'>More here</h3>
-	  {blogList}
-	  <Link to="../" key={1} className='blog-ind'>see all</Link>
-	  <hr key={2} className='blog-line'></hr>
-	  <Link to="/" key={3} className='blog-ind'>main page</Link>
+	<ul className='note-select'>
+	  <h3 key={0} className='note-select-title'>More here</h3>
+	  {noteList}
+	  <Link to="../" key={1} className='note-ind'>see all</Link>
+	  <hr key={2} className='note-line'></hr>
+	  <Link to="/" key={3} className='note-ind'>main page</Link>
 	 </ul>
 	 )
 } 
 
-function BlogSelectHam({ shouldShow, blogs, exitClick }) {
+function NoteSelectHam({ shouldShow, notes, exitClick }) {
   const style_var = shouldShow ? {"left": "0"} : {"left": "-20em"}
-  const blogList = blogs.map(blog => blog.id > 5 ? <></> : 
-	<Link to={'../' + blog.urlname} key={blog.id + 5} onClick={exitClick} className=
-      {isSelected(blog.urlname, 'blog-ind-select', 'blog-ind')}>
-	  <div>{blog.name}</div>
-	  <i>{blog.date}</i>
+  const noteList = notes.map(note => note.id > 5 ? <></> : 
+	<Link to={'../' + note.urlname} key={note.id + 5} onClick={exitClick} className=
+      {isSelected(note.urlname, 'note-ind-select', 'note-ind')}>
+	  <div>{note.name}</div>
+	  <i>{note.date}</i>
 	</Link>
 	)
   return (
-	<ul className='blog-select-ham' style={style_var}>
+	<ul className='note-select-ham' style={style_var}>
       <li className='ham-exit' id={4}><img className='cross' onClick={exitClick} src={crossBlack}/></li>
-	  <h3 key={0} className='blog-select-title'>More here</h3>
-	  {blogList}
-	  <Link to="../" key={1} className='blog-ind'>see all</Link>
-	  <hr key={2} className='blog-line'></hr>
-	  <Link to="/" key={3} className='blog-ind'>main page</Link>
+	  <h3 key={0} className='note-select-title'>More here</h3>
+	  {noteList}
+	  <Link to="../" key={1} className='note-ind'>see all</Link>
+	  <hr key={2} className='note-line'></hr>
+	  <Link to="/" key={3} className='note-ind'>main page</Link>
 	 </ul>
 	 )
 } 
 
-function Blog({ index }) {
-  const this_blog = blogs.find((blog) => blog.id === index)
+function Note({ index }) {
+  const this_note = notes.find((note) => note.id === index)
   const [hamClick, setHamClick] = useState(false)
 
   function changeHamClick() {
@@ -71,17 +71,17 @@ function Blog({ index }) {
 
   return (<>
 	<HamburgerButton className="hamburger-button2" onClick={changeHamClick}/>
-	<BlogSelectHam shouldShow={hamClick} blogs={blogs} exitClick={changeHamClick}/>
+	<NoteSelectHam shouldShow={hamClick} notes={notes} exitClick={changeHamClick}/>
   	<div className='main-box'>
-	  <BlogSelect blogs={blogs}/>
-	  <div className='blog-container'>
+	  <NoteSelect notes={notes}/>
+	  <div className='note-container'>
 		<div className='title-and-date'>
-		  <div className='title'>{this_blog.author}</div>
-		  <div className='date'><i>{this_blog.date}</i></div>
+		  <div className='title'>{this_note.author}</div>
+		  <div className='date'><i>{this_note.date}</i></div>
 		</div>
-		<div className='blog'>
+		<div className='note'>
 		  <Markdown
-        children={this_blog.data}
+        children={this_note.data}
         components={{
           pre({children}) {
             return <>{children}</>
@@ -128,4 +128,4 @@ function Blog({ index }) {
 	</>)
 } 
 
-export default Blog
+export default Note

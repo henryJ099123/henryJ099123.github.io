@@ -26,6 +26,9 @@ function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) 
       <a className='no-underline' href="/jochaniewicz_henry_resume.pdf" target="_blank"><li className='hamburger-nav-item'>
         résumé
       </li></a>
+      <Link to='notes/' className='no-underline'>
+        <li className='hamburger-nav-item'>notes</li>
+      </Link>
       <a href="https://github.com/henryJ099123" target="_blank"><li className='hamburger-nav-item-github'>
         <img src={githubLogoWhite} className='hamburger-github'/>
       </li></a>
@@ -315,6 +318,9 @@ function App() {
           <a href="https://github.com/henryJ099123" target="_blank"><li className='nav-item-github'>
             <img className='github' src={githubLogoWhite} width={24} height={24}/>
           </li></a>
+          <Link to='notes/' className='no-underline'>
+            <li className='nav-item'>notes</li>
+          </Link>
         </div>
       </ul>
 
@@ -421,3 +427,4 @@ function App() {
 }
 
 export default App
+
