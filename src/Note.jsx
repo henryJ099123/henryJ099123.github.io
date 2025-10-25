@@ -46,7 +46,7 @@ function NoteSelectHam({ shouldShow, notes, exitClick }) {
       <li className='ham-exit' key={4}><img className='cross' onClick={exitClick} src={crossBlack}/></li>
 	  <h3 key={0} className='note-select-title'>More here</h3>
 	  {noteList}
-	  <Link to="../" key={1} className='note-ind'>see all</Link>
+	  <Link to="/notes/" key={1} className='note-ind'>see all</Link>
 	  <hr key={2} className='note-line'></hr>
 	  <Link to="/" key={3} className='note-ind'>main page</Link>
 	 </ul>

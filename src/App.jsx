@@ -347,7 +347,7 @@ function App() {
           </div>
           <div className='card-big'>
             <img src={profilePic} className='avatar-big'/>
-            <h6 style={{"font-weight": "normal"}}>(me in Chamonix)</h6>
+            <h6 style={{fontWeight: "normal"}}>(me in Chamonix)</h6>
           </div>
         </div>
 

@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 .github
 
-src/notes/
-notes/
+noteDrafts/
