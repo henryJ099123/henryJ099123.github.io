@@ -16,7 +16,7 @@ function isSelected(name, selected, notSelected) {
 
 function NoteSelect({ notes }) {
   const noteList = notes.map(note => note.id > 5 ? <></> : 
-	<Link to={'../' + note.urlname} key={note.id + 4} className={isSelected(note.urlname, 'note-ind-select', 'note-ind')}>
+	<Link to={'/notes/' + note.urlname} key={note.id + 4} className={isSelected(note.urlname, 'note-ind-select', 'note-ind')}>
 	  <div>{note.name}</div>
 	  <i>{note.date}</i>
 	</Link>
@@ -25,7 +25,7 @@ function NoteSelect({ notes }) {
 	<ul className='note-select'>
 	  <h3 key={0} className='note-select-title'>More here</h3>
 	  {noteList}
-	  <Link to="../" key={1} className='note-ind'>see all</Link>
+	  <Link to="/notes" key={1} className='note-ind'>see all</Link>
 	  <hr key={2} className='note-line'></hr>
 	  <Link to="/" key={3} className='note-ind'>main page</Link>
 	 </ul>
@@ -35,7 +35,7 @@ function NoteSelect({ notes }) {
 function NoteSelectHam({ shouldShow, notes, exitClick }) {
   const style_var = shouldShow ? {"left": "0"} : {"left": "-20em"}
   const noteList = notes.map(note => note.id > 5 ? <></> : 
-	<Link to={'../' + note.urlname} key={note.id + 5} onClick={exitClick} className=
+	<Link to={'/notes/' + note.urlname} key={note.id + 5} onClick={exitClick} className=
       {isSelected(note.urlname, 'note-ind-select', 'note-ind')}>
 	  <div>{note.name}</div>
 	  <i>{note.date}</i>
