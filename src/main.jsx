@@ -16,7 +16,7 @@ function AllRouter({ notes }) {
   	<Routes>
 	  <Route path = '/'>
 		<Route index element={<App/>}/>
-		<Route path='notes/'>
+		<Route path='/notes/'>
 		  <Route index element={<NoteStart/>}/>
 		  {listnotes}
 		</Route>

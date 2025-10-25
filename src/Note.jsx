@@ -43,7 +43,7 @@ function NoteSelectHam({ shouldShow, notes, exitClick }) {
 	)
   return (
 	<ul className='note-select-ham' style={style_var}>
-      <li className='ham-exit' id={4}><img className='cross' onClick={exitClick} src={crossBlack}/></li>
+      <li className='ham-exit' key={4}><img className='cross' onClick={exitClick} src={crossBlack}/></li>
 	  <h3 key={0} className='note-select-title'>More here</h3>
 	  {noteList}
 	  <Link to="../" key={1} className='note-ind'>see all</Link>
