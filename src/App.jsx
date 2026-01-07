@@ -26,9 +26,11 @@ function HamburgerNavigation({ shouldShow, exitClick, setIsItalian, isItalian}) 
       <a className='no-underline' href="/jochaniewicz_henry_resume.pdf" target="_blank"><li className='hamburger-nav-item'>
         résumé
       </li></a>
-      <Link to='notes/' className='no-underline'>
+      {/*<Link to='notes/' className='no-underline'>*/}
+      <a href="/notes" target="_blank">
         <li className='hamburger-nav-item'>notes</li>
-      </Link>
+      </a>
+        {/*</Link>*/}
       <a href="https://github.com/henryJ099123" target="_blank"><li className='hamburger-nav-item-github'>
         <img src={githubLogoWhite} className='hamburger-github'/>
       </li></a>
