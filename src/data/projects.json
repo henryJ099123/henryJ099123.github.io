@@ -1,14 +1,25 @@
 [
     {
+        "id": 4,
+        "title": "chip-8 emulator",
+        "date": "January 2026",
+        "description": "As a stepping stone to making a true NES emulator, I took a stab at writing a <a href=\"https://en.wikipedia.org/wiki/CHIP-8\" target=\"_blank\">Chip-8</a> emulator/interpreter, a programming language meant for 8-bit hardware, in C. I learned the basics of software emulation, where I needed to stick to the original hardware specifications, where I could make some nice shortcuts, how to use the SDL library, and how to synchronize different parts of hardware that are supposed to operate at different freuqencies. Additionally, I wrote a debug mode to help step through my emulator (since it of course didn't work the first time), and got used to writing in a new assembly language (but in hexadecimal...no assembler to help out!).</br></br>Check it out <a href=\"https://github.com/henryJ099123/chip8-emulator\" target=\"_blank\">here</a> or by clicking on the gif below, which shows an airplane game I found online being played on my emulator.",
+        "is_shader": false,
+        "content": "/emulator.gif",
+        "link": "https://github.com/henryJ099123/chip8-emulator"
+    },
+    {
         "id": 3,
         "title": "interpreters",
-        "description": "I just finished reading the textbook <a href=\"https://craftinginterpreters.com/\" target=\"_blank\">Crafting Interpreters</a> by Robert Nystrom in order to learn how interpreters work under the hood (via parsing, tokenizing, context-free grammars, etc.). In the first part of the book, I followed along building an interpreter with Java for Nystrom's toy dynamic, object-oriented programming language Lox using abstract syntax trees. The parsing and execution was done in these recursive trees. Beyond his implementation, I added file input and output, lists, for-each loops, string indexing, anonymous functions, and more.<br/><br/>In the second half of the book, I followed and built another interpreter using C to seriously improve performance. This interpreter single-pass compiles the source code to intermediate bytecode and then interprets that with a virtual machine. It uses a Pratt parser, a stack-based interpreter, a mark-sweep garbage collector, and tagged unions to encapsulate dynamic values (or NaN boxing via a flag). There's tons of other optimized techniques that I implemented, both from the book and from its exercises, resulting in an average 3 times speedup on my machine.<br></br>Check out my implementations <a href=\"https://github.com/henryJ099123/interpreters\" target=\"_blank\">here</a>.",
+        "date": "Summer 2025",
+        "description": "I read through the textbook <a href=\"https://craftinginterpreters.com/\" target=\"_blank\">Crafting Interpreters</a> by Robert Nystrom in order to learn how interpreters work under the hood (via parsing, tokenizing, context-free grammars, etc.). In the first part of the book, I followed along building an interpreter with Java for Nystrom's toy dynamic, object-oriented programming language Lox using abstract syntax trees. The parsing and execution was done in these recursive trees. Beyond his implementation, I added file input and output, lists, for-each loops, string indexing, anonymous functions, and more.<br/><br/>In the second half of the book, I followed and built another interpreter using C to seriously improve performance. This interpreter single-pass compiles the source code to intermediate bytecode and then interprets that with a virtual machine. It uses a Pratt parser, a stack-based interpreter, a mark-sweep garbage collector, and tagged unions to encapsulate dynamic values (or NaN boxing via a flag). There's tons of other optimized techniques that I implemented, both from the book and from its exercises, resulting in an average 3 times speedup on my machine.<br></br>Check out my implementations <a href=\"https://github.com/henryJ099123/interpreters\" target=\"_blank\">here</a>.",
         "is_shader": false
     },
     {
         "id": 2,
-        "title": "shaders",
-        "description": "In Summer of 2024, I learned from <a href=\"https://thebookofshaders.com/\" target=\"_blank\">thebookofshaders.com</a> by Patricio Gonzales Vivo and Jen Lowe how to design and code fragment shaders using OpenGL, using techniques like shaping functions, deterministic randomness, cellular noise, and fractal Brownian motion. With these techniques, I constructed Voronoi diagrams, the Mandelbrot set, and tons of cool-looking shape transformations. Click on the shaders to cycle through some of the <a href=\"https://github.com/henryJ099123/shader_practice\" target=\"_blank\">ones I made</a> (and try moving your mouse over some!).",
+        "title": "fragment shaders",
+        "date": "Summer 2024",
+        "description": "I learned from <a href=\"https://thebookofshaders.com/\" target=\"_blank\">thebookofshaders.com</a> by Patricio Gonzales Vivo and Jen Lowe how to design and code fragment shaders using OpenGL, using techniques like shaping functions, deterministic randomness, cellular noise, and fractal Brownian motion. With these techniques, I constructed Voronoi diagrams, the Mandelbrot set, and tons of cool-looking shape transformations. This practice served as a great stepping stone for my future research into computer graphics, going onwards to all different kinds of shaders. Click on the shaders to cycle through some of the <a href=\"https://github.com/henryJ099123/shader_practice\" target=\"_blank\">ones I made</a> (and try moving your mouse over some!).",
         "is_shader": true,
         "content": [
             "cells_wall.frag",
@@ -25,6 +36,7 @@
     {
         "id": 1,
         "title": "infinite sum visualizer",
+        "date": "Summer 2024",
         "description": "When I was a kid, I developed a Processing applet with Java to display some infinite sum formulae with complex inputs on the complex plane. I decided to recently rebuild it using Python for a cleaner look, smoother interactivity, and deeper practice with magic method overloading. The graph is interactable with the radius of convergence plotted as well. Check it out as a <a href=\"https://colab.research.google.com/drive/1W_epJyG46opPre7LBc9gb4xm6BCMwvWP?usp=sharing\" target=\"_blank\">Google Colab</a> by clicking the picture, or see the <a href=\"https://github.com/henryJ099123/InfSumsVisualized\">repository</a> itself.",
         "is_shader": false,
         "content": "/graph.svg",
@@ -33,6 +45,7 @@
     {
         "id": 0,
         "title": "this website",
+        "date": "2025",
         "description": "I hope you've enjoyed looking at it (I spent a lot of time in these style sheets). It's built with React, and it's my first exposure to HTML and CSS. While I have technically used Javascript before, the last time I tried was before <code>let</code> existed...so basically brand new to JS too. While I don't plan on working in web development anytime soon, experiencing the process first-hand taught me about the importance of communication, as <i>anyone</i> will be checking out this site, not just developers, and visual communication of my contributions is key.",
         "is_shader": false
     }

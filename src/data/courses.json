@@ -25,16 +25,16 @@
       "link": "/finalProject.pdf"
     },
     {
-        "id": 3,
-        "name": "Operating Systems Principles",
-        "description": "This course covers three important themes of operating systems: virtualization, concurrency, and persistence. In this class, we cover system calls, OS scheduling and different scheduling algorithms, concurrency via events and threads, virtual memory, the file system, and more. I've implemented a process queue shell in C that allows the user to simulate running background processes on multiple cores via FIFO, Round Robin, and MLFQ, but the next projects involve a server hosting a chat service, an implementation of <code>malloc</code>, and a file system."
-    },
-    {
-      "id": 4,
+      "id": 3,
       "name": "Theory of Computing",
       "name_italian":"Teoria del calcolo",
       "description": "This course introduced computability theory, formal languages and automata, and complexity theory with the goal of understanding the limits of various computational models such as finite automata, pushdown automata, context-free grammars, and Turing machines. Some topics we covered were undecidability, the classes P and NP, reduction, and NP completeness.<br></br>For the class, I designed in a group a nondeterministic finite automata simulator, a regular expression parser and matcher similar to grep which uses that NFA simulator, a sed-like editor with a complimentary Turing machine simulator, and a regex matcher with backreferences. We also proved the regex matcher with backreferences was NP-complete by building a SAT solver through regular expression matching with backreferences.",
       "description_italian": "Introduzione ai linguaggi formali e automi, la teoria della computabilità, e la teoria della complessità con lo scopo di capire la potenza e i limiti dei modelli computazionali diversi. Argomenti includono i linguaggi regolari e automi a stati finiti,  "
+    },
+    {
+        "id": 4,
+        "name": "Operating Systems Principles",
+        "description": "This course covers three important themes of operating systems: virtualization, concurrency, and persistence. In this class, we covered system calls, OS scheduling and different scheduling algorithms, concurrency via events, threads, locks, and sempahores, virtual memory via paging and segmentation, different file systems that used extents or direct addressing, disks, flash, RAID, and more. To put these into practice, I've implemented a process queue shell in C that allows the user to simulate running background processes on multiple cores via FIFO, Round Robin, and MLFQ, a chat-service client with multithreaded sending and receiving of messages, an implementation of <code>malloc</code> (and by extension <code>calloc</code> and <code>realloc</code>), and a miniature file system."
     },
     {
       "id": 5,
@@ -44,11 +44,11 @@
     {
         "id": 6,
         "name": "Compilers and Language Design",
-        "description": "This class involves building a compiler for a C-like language called B-minor from scratch. So far, we've built a scanner using Flex, implemented a string encoder and decoder for various escapec codes, and learned about different parsing techniques regarding LL(1) and LR(1) grammars. We will ultimately build a shift-reduce parser to transform source code into an abstract syntax tree to then generate x86 assembly code in the codegen phase."
+        "description": "This class involves building a compiler for a safe, compiled, statically-typed C-like language called B-minor from scratch. We covered the theory of parsing, covering LL(1), LR(1), SLR, and LALR, grammars, and I learned how to use development tools like Flex and Bison/Yacc to build scanner and parsers. After generating an abstract syntax tree via the Bison parser, I performed type checking (much harder than expected) and code generation to x86 assembly to produce a valid assembly file, interoperable with C code. While it took a long time, generating code for just iterating over a loop was <i>very</i> satisfying."
     },
     {
         "id": 7,
         "name": "Undergraduate Research in Computer Graphics",
-        "description": "Under Professor Daniel Rehberg, I'm working on a project simulating Aeolian sand simulations using OpenGL with 3 other undergraduates. From this project, I'm learning some professional software development techniques, studying the graphics pipeline, practicing my shaders, and hopefully generating some cool-looking sand graphics."
+        "description": "Under Professor Daniel Rehberg, I'm working on a project simulating Aeolian sand simulations for game development or physics simulation purposes through OpenGL with 3 other undergraduates. Through this project, I was first exposed to creating pull requests and studying the graphics pipeline in full. Beyond study, I created and practiced vertex, fragment, geometry, and tessellation shaders, was first exposed to the SDL graphics rendering library, implemented lighting techniques and dynamic tessellation, and generating some cool-looking sand graphics that took advantage of the dynamic simulation of the project. Hopefully next semester, we have a paper or trifold to demonstrate its effects."
     } 
   ]

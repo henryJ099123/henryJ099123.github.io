@@ -63,7 +63,10 @@ function GenerateProjectImage({project, shaders, shaderIndex, onClickShader}) {
 function ListOfProjects({projects, shaders, shaderIndices, onClickShader, isItalian}) {
   const listItems = projects.map(project =>
     <li key={project.id} className='project-ind'>
-      <h3 className='project-title'>{project.title}</h3>
+      <div className='project-titles'>
+        <h3>{project.title}</h3>
+        <i><h4>{project.date}</h4></i>
+      </div>
       <div className='description-project'>
         <p dangerouslySetInnerHTML={{__html: !isItalian ? project.description : project.description_italian}} className='text-box-project'/>
         <GenerateProjectImage project={project} shaders={shaders}
@@ -199,15 +202,16 @@ function AboutMe({isItalian}) {
     <p>
     I'm a student
     studying computer science
-    with a minor in theology.
+    with minors in theology and mathematics.
     My favorite thing to do is solve problems:
     I get excited when I receive tough problem sets
-    (which may or may not be sane) love the thrill
+    (which may or may not be sane), love the thrill
     of overcoming them, and
     take math classes as my electives (for fun).
     Taken together, 
     computer science is a perfect fit.
     I'm not satisfied until I understand something inside and out,
+    knowing exactly where data is coming from and where it is going,
     which probably explains why I gravitate towards mathematical proofs
     and getting under the hood of anything I come across.
     I don't just want to <i>know</i>, but I want to <i>know why</i>.
@@ -219,10 +223,10 @@ function AboutMe({isItalian}) {
     especially Studio Ghibli
     (<i>Howl's Moving Castle</i>, <i>Spirited Away</i>)
     and Alfred Hitchcock (<i>Rear Window</i>, <i>Vertigo</i>).
-    My favorite video games are story-based or centered around puzzles and knowledge
+    My favorite video games are story-based or puzzle- and knowledge-centric 
     (e.g. <i>Outer Wilds</i>, <i>Bioshock</i>, <i>Hollow Knight</i>).
     Beyond that, I like to teach myself piano, fold origami, or practice
-    my Italian (and now, some French, too).
+    my Italian and French.
     </p>
   )
 }
@@ -388,7 +392,7 @@ function App() {
         {/* my current projects */}
         <div id='projects' className='scroll-less'>
           <div className='headers'>
-            <h2>current projects</h2>
+            <h2>current and past projects</h2>
             <p className='contact-me-text'>
               Here are some of my personal projects.
               I really like mixing together mathematics and computer science,
