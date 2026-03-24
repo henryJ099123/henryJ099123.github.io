@@ -47,8 +47,8 @@ jobs:
         with:
           # Upload dist folder
           path: './dist'
-      - name: create notes directories
-        run: mkdir ./dist/notes; cp ./dist/index.html ./dist/notes
+      - run: mkdir './dist/notes/'
+      - run: cp './dist/index.html' './dist/notes'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
