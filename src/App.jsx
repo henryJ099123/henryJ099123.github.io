@@ -322,7 +322,7 @@ function App() {
           <a href="https://github.com/henryJ099123" target="_blank"><li className='nav-item-github'>
             <img className='github' src={githubLogoWhite} width={24} height={24}/>
           </li></a>
-          <Link to='notes/' className='no-underline'>
+          <Link to='/notes/' className='no-underline'>
             <li className='nav-item'>notes</li>
           </Link>
         </div>
