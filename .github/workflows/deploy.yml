@@ -40,8 +40,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Create notes directories
-        run: mkdir -p './dist/notes/'
+      - name: Create notes directories and copy index folder
+        run: mkdir -p './dist/notes/'; cp './dist/index.html' './dist/notes/index.html'
       - name: Create ACTIVE_NOTES env variable
         run: echo "ACTIVE_NOTES=\"$(grep '"urlname":' src/data/notes.json | sed -E 's/.*"urlname". "(.*)".*/\1/' | tr "\n" " ")\"" >> $GITHUB_ENV
       - name: Verify output
