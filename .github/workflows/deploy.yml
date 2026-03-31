@@ -43,7 +43,7 @@ jobs:
       - name: Create notes directories
         run: mkdir -p './dist/notes/'
       - name: Create ACTIVE_NOTES env variable
-        run: echo "ACTIVE_NOTES=\"$(grep '"urlname":' src/data/notes.json | sed -E 's/.*"urlname". "(.*)".*/\1/' | tr "\n" " ")\"" >> $GITHUB_ENV
+        run: echo "ACTIVE_NOTES=\"$(grep '"urlname":' src/data/notes.json | sed -E 's/.*"urlname". "(.*)".*/\1/' | tr -d '"' | tr "\n" " ")\"" >> $GITHUB_ENV
       - name: Verify output
         run: echo "active notes - $ACTIVE_NOTES"
       - name: make directories and copy index file
