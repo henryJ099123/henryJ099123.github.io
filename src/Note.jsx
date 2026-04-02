@@ -2,6 +2,7 @@ import { useState, useLayoutEffect } from 'react'
 import notes from './data/notes.json'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import Markdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 import profilePic from './assets/hiking_me.jpg'
 import crossBlack from './assets/cross_black.svg'
 import HamburgerButton from './HamburgerButton.jsx'
@@ -105,6 +106,7 @@ function Note({ index }) {
                 <code {...rest} className={className}>{children}</code>)
           } 
         }} 
+        rehypePlugins={[rehypeRaw]}
       />
 		</div>
 	  </div>
