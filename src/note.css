@@ -30,8 +30,10 @@ blockquote {
   background-image: linear-gradient(to right, var(--accent-color-bg), var(--accent-color-bg-pale));
   */
   padding: 1em 1em;
-  margin: 0;
-  margin-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0em;
   transition-duration: var(--transition-time);
 } 
 
