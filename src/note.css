@@ -157,7 +157,6 @@ blockquote:hover {
 
 .note-ind:hover {
   background-color: var(--bg-button-hover-color);
-  color: var(--text-button-hover-color-light);
   text-decoration: none;
   outline: 2px solid var(--border-hover-color);
 } 
@@ -172,7 +171,7 @@ blockquote:hover {
   outline: 2px solid var(--border-hover-color);
   transition-duration: var(--transition-time);
   color: var(--text-button-hover-color-light);
-  background-color: var(--bg-button-hover-color-alt);
+  background-color: var(--bg-hover-color);
   font-style: normal
 } 
 
@@ -214,6 +213,7 @@ blockquote:hover {
 } 
 
 .about-me-text {
+  --highlight-color: var(--color4);
   text-align: left;
   padding: 1em;
   margin: 0;
@@ -223,15 +223,6 @@ blockquote:hover {
   background-color: var(--bg-color);
   color: var(--text-color-light);
   transition-duration: var(--transition-time);
-}
-
-.about-me-text:hover {
-  background-color: var(--bg-hover-color);
-  color: var(--text-hover-color-light);
-  outline-color: var(--border-hover-color);
-  a, i {
-    color: var(--highlight-hover-color);
-  }
 }
 
 .credits {

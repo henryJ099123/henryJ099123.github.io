@@ -4,4 +4,8 @@
   "name_italian": "Strutture dati",
   "description": "Your classic data structures class, taught in both C and Python. In C, we implemented dynamic arrays, linked lists, sorting algorithms, hash maps, sets, stacks, and more, while in Python, we implemented doubly linked lists, trees, binary trees, self-rotating trees, heaps, graphs, and graph search algorithms. The class also covered common algorithms, such as BFS, DFS, Dijkstra's, Prim's, Kahn's, heapsort, merge sort, quicksort, and more."
 },
-
+{
+  "id": 1,
+  "name": "Systems Programming",
+  "description": "In this class, I learned the ins and outs of regular expressions, the command line, and the shell, as well as going deeper into Python and C. I learned to parse different data formats such as JSON, YAML, and XML, but the coolest part was building a client-server connection. The client was an interactive C program that queried a Python server to parse a JSON file. The Python server sent the requests back CSV-formatted over a ZMQ socket."
+},

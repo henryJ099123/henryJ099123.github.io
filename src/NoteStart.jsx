@@ -30,27 +30,29 @@ function NoteStart() {
 
   return(
     <div className='main-box'>
-      <div className='box'>
+      <div>
         <h1>notes</h1>
         <NoteSelect notes={notes}/>
       </div>
       <div className='about-me2'>
-		<div className='card'>
-		  <img src={profilePic} className='avatar'/>
-		</div>
+        <div className='card'>
+          <img src={profilePic} className='avatar'/>
+        </div>
         <div className='about-me-text'>
-          <h3 className='about-me-header'>about me</h3>	
+          <h3>about me</h3>	
           <p>
-            Hello, I'm Henry Jochaniewicz and this is my note.
-            I hope you enjoyed checking it out! You can check out my main page <Link to="/">here</Link>.
+          Hello, I'm Henry Jochaniewicz and this is my note.
+          I hope you enjoyed checking it out!
+          You can check out my main page <Link to="/">here</Link>.
           </p>
         </div>
         <div className='credits'>
           <hr className='credits-line'></hr>
           <p>Copyright &copy;2025 Henry Jochaniewicz. All rights reserved.</p>
         </div>
-      </div>
-  </div>)
+    </div>
+  </div>
+  )
 }
 
 export default NoteStart;
